@@ -54,7 +54,7 @@ export default function Loja() {
 
           {bancas.map((b) => {
             // a cesta da semana aparece grande, no topo da banca dela
-            const temCesta = cestaDestaque && b.produtos.some((p) => p.id === cestaDestaque.id);
+            const temCesta = b.produtos.some((p) => p.id === cestaDestaque?.id);
             const cards = b.produtos.filter((p) => p.id !== cestaDestaque?.id);
             return (
             <section key={b.id} className="banca" aria-labelledby={`banca-${b.slug}`}>
