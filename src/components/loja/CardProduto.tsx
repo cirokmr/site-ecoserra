@@ -14,7 +14,7 @@ export default function CardProduto({ produto }: { produto: Produto }) {
         <Foto produto={produto} />
       </Link>
       <div className="pcard__corpo">
-        {produto.organico && <span className="certif">✓ {textosLoja.selo}</span>}
+        {produto.organico && <span className="certif">✓ {textosLoja.seloCurto ?? textosLoja.selo}</span>}
         <h3 className="pcard__nome">
           <Link href={href}>{produto.nome}</Link>
         </h3>

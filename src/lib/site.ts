@@ -157,6 +157,8 @@ export type Site = {
     descricao: string;
     /** selo dos produtos marcados como orgânicos */
     selo: string;
+    /** versão curta do selo, para os cards */
+    seloCurto?: string;
     /** procedência mostrada quando o produto não tem "origem" cadastrada */
     procedenciaPadrao: string;
     /** onde a loja entrega (texto curto) */

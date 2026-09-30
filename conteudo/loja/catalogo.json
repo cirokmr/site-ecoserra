@@ -263,7 +263,7 @@
       "organico": true,
       "congelado": true,
       "conservacao": "Manter no congelador.",
-      "destaque": false,
+      "destaque": true,
       "ordem": 3,
       "imagens": [],
       "safra": null

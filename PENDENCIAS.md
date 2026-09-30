@@ -10,7 +10,6 @@
 - [ ] Tamanho e preço da cesta da semana.
 
 ## Técnicas
-- [ ] `package-lock.json` foi apagado ao trocar as fontes (sem npm neste ambiente). Gerar um novo com `npm install` e commitar.
 - [ ] Conectar o repositório à Vercel e, no Tombo CMS (site ecoserra → Outros endereços), cadastrar o endereço de prévia da Vercel: sem isso a API da loja e o formulário recusam o site (CORS).
 - [ ] Conferir se o identificador do site no Tombo CMS é `ecoserra` (usado em `formEndpoint` e em `conteudo/loja/catalogo.json → site`).
 - [ ] Abrir a loja no painel quando os produtos estiverem cadastrados (API responde 503 com a loja fechada; o site continua mostrando o preço do catálogo).

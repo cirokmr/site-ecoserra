@@ -8,7 +8,7 @@ ordem: 4
 
 <h2 class="chapter"><span>01</span>Termo de colaboração</h2>
 
-**TERMO DE COLABORAÇÃO/MINISTÉRIO DO DESENVOLVIMENTO E ASSISTÊNCIA SOCIAL, FAMÍLIA E COMBATE À FOME/MDS – TRANSFEREGOV Nº 7AABKH/2026**
+**TERMO DE COLABORAÇÃO / MINISTÉRIO DO DESENVOLVIMENTO E ASSISTÊNCIA SOCIAL, FAMÍLIA E COMBATE À FOME / MDS – TRANSFEREGOV Nº 7AABKH/2026**
 
 Abaixo os dados para transparência conforme artigo 11, incisos I a VI, da Lei nº 13.019 de 2014.
 
@@ -18,17 +18,8 @@ Abaixo os dados para transparência conforme artigo 11, incisos I a VI, da Lei n
 
 <h2 class="chapter"><span>02</span>Valores</h2>
 
-| Item | Valor |
-|---|---:|
-| Valor total da parceria | R$ 1.697.525,80 |
-| Valor da 1ª parcela recebida | R$ 679.010,32 |
-| Valor da 2ª parcela a receber | R$ 509.257,74 |
-| Valor da 3ª parcela a receber | R$ 509.257,74 |
+<dl class="facts"><dt>Valor total da parceria</dt><dd>R$ 1.697.525,80</dd><dt>Valor da 1ª parcela recebida</dt><dd>R$ 679.010,32</dd><dt>Valor da 2ª parcela a receber</dt><dd>R$ 509.257,74</dd><dt>Valor da 3ª parcela a receber</dt><dd>R$ 509.257,74</dd></dl>
 
 <h2 class="chapter"><span>03</span>Remuneração da equipe da entidade gestora</h2>
 
-| Função | Valor |
-|---|---:|
-| Nutricionista | R$ 2.439,00/mês |
-| Coordenação do projeto e prestação de contas | R$ 3.840,00/mês |
-| Monitoramento e apoios às cozinhas solidárias | R$ 1.920,00/mês |
+<dl class="facts"><dt>Nutricionista</dt><dd>R$ 2.439,00/mês</dd><dt>Coordenação do projeto e prestação de contas</dt><dd>R$ 3.840,00/mês</dd><dt>Monitoramento e apoios às cozinhas solidárias</dt><dd>R$ 1.920,00/mês</dd></dl>

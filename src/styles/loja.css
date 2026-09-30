@@ -114,7 +114,7 @@
 /* ---------- grade de cards ---------- */
 .pgrade {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: clamp(14px, 1.6vw, 22px);
 }
 .pcard {
@@ -149,6 +149,20 @@
   flex-wrap: wrap;
   margin-top: auto;
   padding-top: 4px;
+}
+
+/* celular: duas colunas, card compacto (vitrine rápida de rolar) */
+@media (max-width: 600px) {
+  .pgrade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pcard__corpo { padding: 10px 10px 12px; gap: 8px; }
+  .pcard__nome { font-size: 1.02rem; }
+  .pcard .certif, .pcard .proc { font-size: 9.5px; padding: 3px 6px; letter-spacing: 0.04em; }
+  .pcard .pcard__linha { flex-direction: column; align-items: stretch; gap: 8px; }
+  .pcard .preco-vivo { align-self: start; }
+  .pcard .etiqueta { font-size: 0.9rem; padding: 5px 9px 5px 15px; }
+  .pcard .badd, .pcard .badd__btn { width: 100%; }
+  .pcard .badd__btn { padding: 10px 8px; font-size: 11px; }
+  .pcard .pfoto__vazia .mono { display: none; }
 }
 
 /* ---------- botão adicionar e quantidade ---------- */
@@ -358,3 +372,6 @@
 @media (prefers-reduced-motion: reduce) {
   .pfoto img, .pcard__link:hover img { transition: none; transform: none; }
 }
+
+/* textos longos sem espaço (números de processo, e-mails) não empurram a página */
+.prose { overflow-wrap: break-word; }

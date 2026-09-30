@@ -35,7 +35,7 @@
   /* Bricolage: eixo wdth de 75 a 100, peso até 800. */
   --display-largura: 100%;
   --display-peso: 800;
-  --display-em-por-letra: 0.72;
+  --display-em-por-letra: 0.64;
   --display-espaco: -0.03em;
   --display-entrelinha: 0.88;
   --cond-largura: 78%;

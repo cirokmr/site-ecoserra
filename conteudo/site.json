@@ -163,6 +163,7 @@
     "lead": "Orgânicos certificados das famílias cooperadas, com entrega na Serra Catarinense e em Florianópolis.",
     "descricao": "Loja da Cooperativa Ecoserra: frutas, hortaliças e congelados orgânicos certificados da agricultura familiar da Serra Catarinense.",
     "selo": "Orgânico certificado · Rede Ecovida",
+    "seloCurto": "Orgânico certificado",
     "procedenciaPadrao": "Agricultura familiar · Serra Catarinense",
     "entrega": "Entregamos na Serra Catarinense e em Florianópolis.",
     "demonstracao": "Loja em demonstração: os preços são de exemplo e ainda não dá para finalizar pedidos."
@@ -171,7 +172,7 @@
     "rotulo": "Projetos · {n} registros",
     "titulo": "Projetos",
     "lead": "Projetos da Cooperativa Ecoserra.",
-    "descricao": "Projetos da Cooperativa Ecoserra.",
+    "descricao": "Projetos da Cooperativa Ecoserra, cooperativa de agricultores familiares agroecológicos da Serra Catarinense.",
     "voltar": "← Projetos",
     "proximo": "Próximo projeto",
     "prefixoNumero": "Nº",
@@ -181,7 +182,7 @@
     "rotulo": "Notícias · {n} publicações",
     "titulo": "Notícias",
     "lead": "Novidades da Cooperativa Ecoserra.",
-    "descricao": "Notícias da Cooperativa Ecoserra.",
+    "descricao": "Notícias da Cooperativa Ecoserra, cooperativa de agricultores familiares agroecológicos da Serra Catarinense.",
     "voltar": "← Notícias",
     "proximo": "Próxima notícia",
     "cursor": "Ler"
