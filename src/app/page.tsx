@@ -7,6 +7,7 @@ import Colagem from '@/components/secoes/Colagem';
 import Destaques from '@/components/secoes/Destaques';
 import Texto from '@/components/secoes/Texto';
 import Marcos from '@/components/secoes/Marcos';
+import LojaDestaques from '@/components/secoes/LojaDestaques';
 import { site } from '@/lib/site';
 import { noticias, projetos, preencher, type Noticia } from '@/lib/content';
 
@@ -60,6 +61,8 @@ export default function Home() {
             return <Texto key={i} dados={s} />;
           case 'marcos':
             return <Marcos key={i} dados={s} />;
+          case 'loja-destaques':
+            return <LojaDestaques key={i} dados={s} />;
           default:
             return null;
         }

@@ -77,7 +77,19 @@ export type SecaoTexto = { tipo: 'texto'; tema?: Tema; rotulo?: string; titulo: 
 /** Linha do tempo: anos grandes que "acendem" com a rolagem, cada um com título e texto. */
 export type Marco = { ano: string; titulo: string; texto?: string; imagem?: Imagem & { legenda?: string } };
 export type SecaoMarcos = { tipo: 'marcos'; tema?: Tema; rotulo?: string; titulo: Titulo; itens: Marco[]; link?: Link };
+/** Vitrine na home: a cesta em destaque + os produtos marcados como destaque no catálogo da loja. */
+export type SecaoLojaDestaques = {
+  tipo: 'loja-destaques';
+  tema?: Tema;
+  rotulo?: string;
+  titulo: Titulo;
+  /** quantos produtos (além da cesta); padrão 6 */
+  quantidade?: number;
+  /** texto do link para /loja/ */
+  link?: string;
+};
 export type Secao =
+  | SecaoLojaDestaques
   | SecaoHero
   | SecaoManifesto
   | SecaoFaixa
@@ -136,6 +148,22 @@ export type Site = {
    * capaInteira: a capa da notícia aparece inteira, sem corte (cartazes, convites com texto).
    */
   noticias: TextosLista & { formatoData?: 'curto' | 'longo'; capaInteira?: boolean };
+  /** textos da loja (vitrine em /loja/, produto, carrinho) */
+  loja?: {
+    rotulo: string;
+    titulo: string;
+    destaque?: string;
+    lead: string;
+    descricao: string;
+    /** selo dos produtos marcados como orgânicos */
+    selo: string;
+    /** procedência mostrada quando o produto não tem "origem" cadastrada */
+    procedenciaPadrao: string;
+    /** onde a loja entrega (texto curto) */
+    entrega: string;
+    /** faixa de aviso enquanto o catálogo for de demonstração */
+    demonstracao: string;
+  };
   contatoPagina: { rotulo: string; titulo: Titulo; texto: string; descricao: string; campoMensagem: string };
   rodape: {
     rotulo: string;
@@ -145,6 +173,8 @@ export type Site = {
     palavra: string;
     /** títulos das colunas do rodapé (padrão: Contato, Registro) e o nome dos itens contados */
     colunas?: { contato?: string; registro?: string; itens?: string };
+    /** links extras na coluna de navegação do rodapé (páginas fora do menu principal) */
+    links?: Link[];
     /** logotipo mostrado no rodapé (arquivo para fundo escuro) */
     logo?: Imagem & { largura: number; altura: number };
   };
@@ -159,6 +189,19 @@ export type Site = {
 };
 
 export const site = dados as unknown as Site;
+
+/** Textos da loja, com padrões para sites sem o bloco "loja" no site.json. */
+export const textosLoja: NonNullable<Site['loja']> = {
+  rotulo: 'Loja',
+  titulo: 'Loja',
+  lead: '',
+  descricao: `Loja ${site.nomeCompleto}.`,
+  selo: 'Orgânico',
+  procedenciaPadrao: '',
+  entrega: '',
+  demonstracao: 'Loja em demonstração: os preços são de exemplo.',
+  ...site.loja,
+};
 
 /** Link de telefone no formato internacional (Brasil por padrão): tel:+554733520118 */
 export const linkTel = (telefone?: string) => {

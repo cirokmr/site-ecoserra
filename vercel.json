@@ -3,12 +3,37 @@
   "framework": "nextjs",
   "redirects": [
     {
-      "source": "/quem-somos.html",
+      "source": "/quem-somos",
       "destination": "/sobre/",
       "permanent": true
     },
     {
-      "source": "/fale-conosco.php",
+      "source": "/galeria-de-fotos",
+      "destination": "/sobre/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos",
+      "destination": "/loja/",
+      "permanent": true
+    },
+    {
+      "source": "/congelados/:splat*",
+      "destination": "/loja/",
+      "permanent": true
+    },
+    {
+      "source": "/frutas/:splat*",
+      "destination": "/loja/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos-in-natura/:splat*",
+      "destination": "/loja/",
+      "permanent": true
+    },
+    {
+      "source": "/fale-conosco",
       "destination": "/contato/",
       "permanent": true
     }

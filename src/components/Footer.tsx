@@ -61,7 +61,7 @@ export default function Footer() {
                   Início
                 </Link>
               </li>
-              {site.nav.map((n) => (
+              {[...site.nav, ...(rodape.links ?? [])].map((n) => (
                 <li key={n.href}>
                   <Link className="u-link" href={n.href}>
                     {n.rotulo}

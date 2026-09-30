@@ -11,44 +11,35 @@
    ========================================================================== */
 
 :root {
-  --escuro: #111214;
-  --escuro-2: #17191c;
-  --escuro-3: #202328;
-  --claro: #eeeae3;
-  --claro-2: #dfd9ce;
-  --destaque: #5b74ff;
-  --destaque-2: #8c9dff;
-  --apoio: #1f2a44;
+  /* Ecoserra — "a feira da serra" (DIRECAO.md). Cores do logo: verde das colinas e da
+     araucária, o sol amarelo, o vermelho do letreiro. */
+  --escuro: #1c3a25;
+  --escuro-2: #244a30;
+  --escuro-3: #2d5a3a;
+  --claro: #f4efe0;
+  --claro-2: #e7dfc8;
+  --destaque: #f2c230;
+  --destaque-2: #f6d466;
+  --apoio: #b8352a;
 
-  /* Fontes: display (títulos em caixa-alta), serif (acentos em itálico), mono (metadados).
-     Os pacotes @fontsource correspondentes são importados em src/app/layout.tsx. */
-  --font-sans: 'Archivo Variable', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Instrument Serif', 'Times New Roman', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  /* O amarelo não tem contraste como texto sobre o claro: lá o acento vira o verde. */
+  --destaque-sobre-claro: #2d5a3a;
 
-  /* Cor de destaque para TEXTO sobre fundo claro (se --destaque não tiver contraste). */
-  /* --destaque-sobre-claro: #3d55d9; */
+  --font-sans: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', 'Arial Narrow', Arial, sans-serif;
+  --font-serif: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  /* Duotone (site.json → fotos.tratamento = "duotone" ou "misto"): sombra e luz das fotos. */
   --duo-sombra: var(--escuro);
   --duo-luz: var(--claro);
 
-  /* Display: largura (eixo wdth, 125 = expandida, 100 = normal), peso e quanto
-     cada letra ocupa em "em" — usado para a palavra gigante caber na tela. */
-  --display-largura: 125%;
-  --display-peso: 860;
-  --display-em-por-letra: 0.94;
-
-  /* Display com outra família ou em caixa baixa (opcional; os valores comentados são os
-     padrões). Ex.: títulos numa serifa leve em caixa baixa → --font-display com a serifa,
-     --display-caixa: none, --display-peso ~360, --display-largura: 100% (fonte sem eixo
-     wdth) e --display-em-por-letra menor (~0.56), senão a palavra gigante fica pequena. */
-  /* --font-display: var(--font-sans); */
-  /* --display-caixa: uppercase; */
-  /* --display-espaco: -0.035em; */
-  /* --display-entrelinha: 0.86; */
-  /* --cond-largura: 72%;   título condensado (.display-cond): largura e peso */
-  /* --cond-peso: 800; */
+  /* Bricolage: eixo wdth de 75 a 100, peso até 800. */
+  --display-largura: 100%;
+  --display-peso: 800;
+  --display-em-por-letra: 0.72;
+  --display-espaco: -0.03em;
+  --display-entrelinha: 0.88;
+  --cond-largura: 78%;
+  --cond-peso: 800;
 
   --gutter: clamp(16px, 3.2vw, 48px);
   --max: 1680px;

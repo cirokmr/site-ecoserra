@@ -1,7 +1,12 @@
 {
-  "_comentario": "Cada URL do site antigo que mudou de endereço entra aqui. Esquerda = caminho antigo, direita = caminho novo. O comando /reconstruir preenche isto a partir de extraido/urls-antigas.json.",
+  "_leia": "URLs do site antigo (extraido/urls-antigas.json) → páginas novas. Depois de mudar: node scripts/gerar-redirects.mjs",
   "redirects": {
-    "/quem-somos.html": "/sobre/",
-    "/fale-conosco.php": "/contato/"
+    "/quem-somos": "/sobre/",
+    "/galeria-de-fotos": "/sobre/",
+    "/produtos": "/loja/",
+    "/congelados/*": "/loja/",
+    "/frutas/*": "/loja/",
+    "/produtos-in-natura/*": "/loja/",
+    "/fale-conosco": "/contato/"
   }
 }

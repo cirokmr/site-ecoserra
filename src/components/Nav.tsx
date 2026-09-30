@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 import { site } from '@/lib/site';
+import CarrinhoLink from '@/components/loja/CarrinhoLink';
 
 type Props = { contagens: Record<string, number> };
 
@@ -95,7 +96,10 @@ export default function Nav({ contagens }: Props) {
               {contagens[item.href] ? <sup>{String(contagens[item.href]).padStart(2, '0')}</sup> : null}
             </Link>
           ))}
+          <CarrinhoLink />
         </nav>
+
+        <CarrinhoLink className="nav__carrinho-cel mono" />
 
         <button className="nav__menu-btn mono" aria-expanded={open} aria-controls="menu" onClick={() => setOpen((v) => !v)}>
           {open ? 'Fechar' : 'Menu'}

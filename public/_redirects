@@ -1,3 +1,8 @@
 # GERADO AUTOMATICAMENTE a partir de redirects.json. Não edite aqui.
-/quem-somos.html  /sobre/  301
-/fale-conosco.php  /contato/  301
+/quem-somos  /sobre/  301
+/galeria-de-fotos  /sobre/  301
+/produtos  /loja/  301
+/congelados/*  /loja/  301
+/frutas/*  /loja/  301
+/produtos-in-natura/*  /loja/  301
+/fale-conosco  /contato/  301

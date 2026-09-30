@@ -1,7 +1,19 @@
 # Direção de arte — Cooperativa Ecoserra
 
-> Status: **proposta, aguardando aprovação**. Base: extração de 30/09/2026 (`extraido/`) e o
+> Status: **aprovada em 30/09/2026** (com as respostas da Ecoserra abaixo). Base: extração de 30/09/2026 (`extraido/`) e o
 > protótipo da loja aprovado na conversa inicial.
+
+## 0. Respostas da Ecoserra (30/09/2026)
+
+1. **Certificação:** todos os produtos à venda são orgânicos certificados → o selo
+   `Orgânico certificado · Rede Ecovida` vale para todos (campo "Orgânico" do painel).
+   Não há selo "em transição" por enquanto.
+2. **Procedência:** atuam na Serra Catarinense; as famílias **topam aparecer em foto**.
+   Grupo de base e município entram no campo "Origem" de cada produto.
+3. **App de delivery:** não existe mais (a loja antiga do site saiu do ar). A loja nova
+   começa do zero.
+4. **Entrega:** Serra Catarinense e Florianópolis (zonas de entrega no painel).
+5. **Cesta da semana:** sim.
 
 ## 1. Conceito: **a feira da serra**
 
