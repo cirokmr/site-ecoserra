@@ -381,3 +381,8 @@
 .tema-claro :focus-visible,
 .pcard :focus-visible,
 .cesta :focus-visible { outline-color: var(--escuro); }
+
+/* celular: palavras longas no título das páginas ("Transparência") cabem na tela */
+@media (max-width: 480px) {
+  .page-hero__title .fs-xxl { font-size: min(3rem, 10vw); }
+}
