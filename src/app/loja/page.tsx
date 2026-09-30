@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 
 // A feira inteira: a cesta em destaque e cada categoria como uma banca numerada.
 export default function Loja() {
-  const outras = bancas.map((b) => ({ ...b, produtos: b.produtos.filter((p) => p.id !== cestaDestaque?.id) })).filter((b) => b.produtos.length);
   return (
     <>
       <header className="page-hero tema-escuro loja-hero">
@@ -52,9 +51,12 @@ export default function Loja() {
       <section className="section tema-claro loja-corpo">
         <div className="wrap">
           <AvisoDemonstracao />
-          {cestaDestaque && <Cesta produto={cestaDestaque} />}
 
-          {outras.map((b) => (
+          {bancas.map((b) => {
+            // a cesta da semana aparece grande, no topo da banca dela
+            const temCesta = cestaDestaque && b.produtos.some((p) => p.id === cestaDestaque.id);
+            const cards = b.produtos.filter((p) => p.id !== cestaDestaque?.id);
+            return (
             <section key={b.id} className="banca" aria-labelledby={`banca-${b.slug}`}>
               <div className="banca__cab">
                 <h2 id={`banca-${b.slug}`} className="banca__titulo">
@@ -65,13 +67,17 @@ export default function Loja() {
                   Ver a banca ({b.produtos.length}) <span className="arrow">→</span>
                 </Link>
               </div>
-              <div className="pgrade">
-                {b.produtos.map((p) => (
-                  <CardProduto key={p.id} produto={p} />
-                ))}
-              </div>
+              {temCesta && cestaDestaque && <Cesta produto={cestaDestaque} />}
+              {cards.length > 0 && (
+                <div className="pgrade">
+                  {cards.map((p) => (
+                    <CardProduto key={p.id} produto={p} />
+                  ))}
+                </div>
+              )}
             </section>
-          ))}
+            );
+          })}
 
           {semCategoria.length > 0 && (
             <section className="banca" aria-labelledby="banca-outros">

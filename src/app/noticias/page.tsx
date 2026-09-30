@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: t.titulo,
   description: t.descricao,
   alternates: { canonical: '/noticias/' },
+  // sem itens, a lista existe (o molde gera a rota) mas não vai para o Google
+  ...(noticias.length ? {} : { robots: { index: false, follow: true } }),
 };
 
 export default function NoticiasPage() {

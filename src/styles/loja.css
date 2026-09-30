@@ -29,8 +29,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.35;
-  color: var(--muted);
-  border: 1px dashed color-mix(in srgb, var(--fg) 40%, transparent);
+  color: color-mix(in srgb, var(--fg) 84%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--fg) 45%, transparent);
   border-radius: 3px;
   padding: 4px 8px;
   width: fit-content;
@@ -156,7 +156,7 @@
   .pgrade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .pcard__corpo { padding: 10px 10px 12px; gap: 8px; }
   .pcard__nome { font-size: 1.02rem; }
-  .pcard .certif, .pcard .proc { font-size: 9.5px; padding: 3px 6px; letter-spacing: 0.04em; }
+  .pcard .certif, .pcard .proc { font-size: 10.5px; padding: 3px 6px; letter-spacing: 0.04em; }
   .pcard .pcard__linha { flex-direction: column; align-items: stretch; gap: 8px; }
   .pcard .preco-vivo { align-self: start; }
   .pcard .etiqueta { font-size: 0.9rem; padding: 5px 9px 5px 15px; }
@@ -251,6 +251,7 @@
 .bancas-nav__item .mono { font-size: 11px; opacity: 0.7; }
 .loja-corpo { padding-top: clamp(40px, 5vw, 72px); }
 .banca { margin-top: clamp(48px, 6vw, 88px); }
+.aviso-demo + .banca { margin-top: 8px; }
 .banca__cab {
   display: flex;
   justify-content: space-between;
@@ -375,3 +376,8 @@
 
 /* textos longos sem espaço (números de processo, e-mails) não empurram a página */
 .prose { overflow-wrap: break-word; }
+
+/* foco visível no fundo claro: o amarelo não tem contraste ali */
+.tema-claro :focus-visible,
+.pcard :focus-visible,
+.cesta :focus-visible { outline-color: var(--escuro); }

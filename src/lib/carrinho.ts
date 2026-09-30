@@ -5,7 +5,8 @@
 import { useSyncExternalStore } from 'react';
 import { demonstracao, urlApi } from './loja';
 
-const CHAVE = 'ecoserra-carrinho';
+// o carrinho da demonstração não passa para a loja de verdade (os ids dos produtos mudam)
+const CHAVE = demonstracao ? 'ecoserra-carrinho-demo' : 'ecoserra-carrinho';
 const EVENTO = 'carrinho-mudou';
 export const MAX_QUANTIDADE = 999;
 export const MAX_ITENS = 60;

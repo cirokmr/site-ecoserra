@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: `${b.nome} — Loja`,
     description: descricaoCurta(
-      b.descricao || `${b.nome} orgânicos da agricultura familiar da Serra Catarinense, na loja da Cooperativa Ecoserra: ${b.produtos.map((p) => p.nome).join(', ')}.`,
+      b.descricao || `${b.nome} orgânicos das famílias cooperadas, na loja da Cooperativa Ecoserra: ${b.produtos.map((p) => p.nome).join(', ')}.`,
     ),
     alternates: { canonical: `/loja/${b.slug}/` },
   };

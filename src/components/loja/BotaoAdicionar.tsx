@@ -9,7 +9,7 @@ import { usePrecoVivo } from './PrecoVivo';
 // "Adicionar" do card (compacto) e da página do produto (com a quantidade).
 export default function BotaoAdicionar({ produto, completo = false }: { produto: Produto; completo?: boolean }) {
   const itens = useCarrinho();
-  const vivo = usePrecoVivo(produto.id);
+  const { vivo, fora } = usePrecoVivo(produto.id);
   const [qtd, setQtd] = useState(1);
   const [aviso, setAviso] = useState('');
   const noCarrinho = itens[produto.id] ?? 0;
@@ -18,7 +18,7 @@ export default function BotaoAdicionar({ produto, completo = false }: { produto:
     vivo?.disponivel ?? MAX_QUANTIDADE,
     vivo?.limite_por_pedido ?? produto.limite_por_pedido ?? MAX_QUANTIDADE,
   );
-  const esgotado = teto <= 0;
+  const esgotado = fora || teto <= 0;
   const un = NOME_UNIDADE[produto.unidade_venda];
 
   const clicar = () => {
@@ -30,7 +30,7 @@ export default function BotaoAdicionar({ produto, completo = false }: { produto:
     setAviso(adicionar(produto.id, quer) ? '' : 'O carrinho está cheio: finalize ou tire algum item.');
   };
 
-  if (esgotado) return <span className="mono badd__esgotado">Esgotado nesta semana</span>;
+  if (esgotado) return <span className="mono badd__esgotado">{fora ? 'Indisponível' : 'Esgotado nesta semana'}</span>;
 
   return (
     <div className={`badd${completo ? ' badd--completo' : ''}`}>

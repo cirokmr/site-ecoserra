@@ -77,11 +77,11 @@
         "imagens": [
           {
             "src": "/img/home/banca-da-cooperativa.webp",
-            "alt": ""
+            "alt": "Banca da Ecoserra com limões, tomates, maçãs e verduras"
           },
           {
             "src": "/img/home/familia-estufa.webp",
-            "alt": ""
+            "alt": "Família de agricultores cooperados numa estufa de alface"
           },
           {
             "src": "/img/home/caixas-no-galpao.webp",
@@ -164,7 +164,7 @@
     "descricao": "Loja da Cooperativa Ecoserra: frutas, hortaliças e congelados orgânicos certificados da agricultura familiar da Serra Catarinense.",
     "selo": "Orgânico certificado · Rede Ecovida",
     "seloCurto": "Orgânico certificado",
-    "procedenciaPadrao": "Agricultura familiar · Serra Catarinense",
+    "procedenciaPadrao": "Famílias cooperadas da Ecoserra",
     "entrega": "Entregamos na Serra Catarinense e em Florianópolis.",
     "demonstracao": "Loja em demonstração: os preços são de exemplo e ainda não dá para finalizar pedidos."
   },

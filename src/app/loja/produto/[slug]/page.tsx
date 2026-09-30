@@ -21,7 +21,7 @@ export function generateStaticParams() {
 const descricaoDe = (p: NonNullable<ReturnType<typeof getProduto>>) =>
   descricaoCurta(
     p.descricao ||
-      `${p.nome}${p.organico ? ' orgânico certificado' : ''} da agricultura familiar da Serra Catarinense, na loja da ${site.nomeCompleto}. ${textosLoja.entrega}`,
+      `${p.nome}${p.organico ? ' orgânico certificado' : ''} das famílias cooperadas, na loja da ${site.nomeCompleto}. ${textosLoja.entrega}`,
   );
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {

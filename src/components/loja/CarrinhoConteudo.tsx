@@ -38,6 +38,7 @@ export default function CarrinhoConteudo() {
   const [montado, setMontado] = useState(false);
   const [vivos, setVivos] = useState<Map<string, PrecoVivo> | null>(null);
   const [cep, setCep] = useState('');
+  const [cepConsultado, setCepConsultado] = useState('');
   const [zonas, setZonas] = useState<Zona[] | null>(null);
   const [zonaId, setZonaId] = useState('');
   const [conta, setConta] = useState<Conta | null>(null);
@@ -64,21 +65,21 @@ export default function CarrinhoConteudo() {
 
   // conta oficial do CMS (preços, frete, total) quando há zona escolhida
   useEffect(() => {
-    if (demonstracao || !zonaId || !linhas.length) {
-      setConta(null);
-      return;
-    }
+    setConta(null);
+    if (demonstracao || !zonaId || !linhas.length) return;
     let ativo = true;
     fetch(urlApi('carrinho'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ itens: linhas.map((l) => ({ produto_id: l.id, quantidade: l.quantidade })), cep, zona_id: zonaId }),
+      body: JSON.stringify({ itens: linhas.map((l) => ({ produto_id: l.id, quantidade: l.quantidade })), cep: cepConsultado, zona_id: zonaId }),
     })
       .then((r) => r.json())
       .then((j) => {
         if (!ativo) return;
-        if (j?.ok) setConta(j as Conta);
-        else setErro(j?.erro || j?.message || 'Não deu para calcular agora. Tente de novo em instantes.');
+        if (j?.ok) {
+          setConta(j as Conta);
+          setErro('');
+        } else setErro(j?.erro || j?.message || 'Não deu para calcular agora. Tente de novo em instantes.');
       })
       .catch(() => ativo && setErro('Sem conexão com a loja. Tente de novo em instantes.'));
     return () => {
@@ -101,8 +102,11 @@ export default function CarrinhoConteudo() {
       const r = await fetch(`${urlApi('frete')}?cep=${d}`, { headers: { Accept: 'application/json' } });
       const j = await r.json();
       if (!j?.ok) throw new Error(j?.erro || j?.message);
-      setZonas(j.zonas as Zona[]);
-      if (!j.atende_entrega) setErro('Ainda não entregamos nesse CEP. Veja se há retirada abaixo.');
+      const lista = (j.zonas ?? []) as Zona[];
+      setZonas(lista);
+      setCepConsultado(d);
+      if (!j.atende_entrega)
+        setErro(lista.length ? 'Ainda não entregamos nesse CEP. Veja a retirada abaixo.' : 'Ainda não entregamos nesse CEP.');
     } catch (err) {
       setErro(err instanceof Error && err.message ? err.message : 'Não deu para consultar a entrega agora.');
     } finally {
