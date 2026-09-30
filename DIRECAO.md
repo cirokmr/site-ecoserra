@@ -18,6 +18,22 @@ lojas, **feiras** e agora a loja no site. O site inteiro se organiza como uma fe
 - **Ritmo.** Alterna "lona" (verde escuro) e "papel de embrulho" (claro), como as bancas cobertas
   e o balcão.
 
+### Estratégia da loja (conversa de 30/09/2026)
+
+- **Selo honesto por produto.** O site antigo diz que a Ecoserra é da Rede Ecovida
+  (certificação participativa) e que o cooperado pode estar *em transição*. Então cada
+  produto mostra `Orgânico certificado · Rede Ecovida` (fundo escuro) **ou**
+  `Em transição agroecológica` (contorno tracejado). Nunca "orgânico" sem certificação.
+- **Procedência concreta:** grupo de base + município no card e na página do produto.
+- **Ficha de procedência** na página do produto, logo abaixo do preço: certificação,
+  quem plantou, colheita (safra), entrega, como conservar.
+- **Colheita da semana + cesta:** a vitrine mostra o que tem agora; a cesta pronta
+  (montada pela cooperativa) aparece em destaque e pode virar assinatura semanal
+  (o banco já tem `loja.safras` e `loja.assinaturas`).
+- **A compra começa na abertura:** botão "Montar minha cesta →" no hero.
+- **Painel (migração nova, 007):** campos `certificacao` (certificado / transição) e
+  `grupo_base` + `municipio` no produto. Só depois das respostas da Ecoserra.
+
 ## 2. Palavra do hero e frase-conceito
 
 - Palavra gigante: **ECOSERRA**
@@ -53,9 +69,9 @@ Nada do trio do Tombô.
 
 | # | Seção do molde | Tema | Conteúdo |
 |---|---|---|---|
-| 1 | `hero` | escuro | ECOSERRA + pergunta; fotos: presidente (família na estufa), quem-somos-2 (banca da feira), caixas de hortaliças (whatsapp-image), banner-home (lavoura) terminando em tela cheia |
+| 1 | `hero` | escuro | ECOSERRA + pergunta + botão "Montar minha cesta"; fotos: presidente recortada (família na estufa, sem o banner) e quem-somos-2 (banca da Ecoserra) |
 | 2 | `manifesto` | claro | "A Ecoserra é uma Cooperativa de Agricultores e Agricultoras Familiares Agroecológicos…" (texto real) + foto presidente |
-| 3 | **`loja-destaques`** (nova, genérica) | claro-2 | "Banca 02 — Da roça": produtos em destaque do `conteudo/loja/catalogo.json`, com etiqueta de preço, e o botão "Ver a feira inteira" |
+| 3 | **`loja-destaques`** (nova, genérica) | claro-2 | "Banca 02 — Da roça": a cesta da semana em destaque + produtos do `conteudo/loja/catalogo.json` com selo de certificação, procedência e etiqueta de preço; botão "Ver a feira inteira" |
 | 4 | `faixa` | destaque | Agroecologia · Agricultura familiar · Certificação participativa · Desde 1999 |
 | 5 | `texto` | escuro | "Banca 03 — EcoIlha": a filial da Grande Florianópolis (texto real) + logo EcoIlha |
 | 6 | `texto` | claro | "Banca 05 — Seja cooperado": requisitos (texto real) + botão para o contato |
@@ -95,3 +111,13 @@ A seção `loja-destaques` é criada genérica (lê o catálogo e um número de 
 - Fotos de produtos em boa resolução (as atuais são miniaturas) e fotos para a galeria.
 - Cadastro real dos produtos no painel: preço, unidade, peso médio, estoque, origem.
 - Confirmar o WhatsApp de pedidos, o Instagram e o CNPJ da matriz (só o da filial aparece).
+- Quais produtos são certificados pela Ecovida e quais estão em transição.
+- Quais grupos de base e municípios podem aparecer; se as famílias topam aparecer com foto.
+- O "aplicativo de delivery" citado no site antigo: ainda funciona? A loja substitui ou
+  convive? Quantos clientes compram por ele? (Se existir, a estratégia vira migrar esses
+  clientes.)
+- Cidades e dias de entrega (Serra e/ou Grande Florianópolis pela EcoIlha).
+- Se querem a cesta da semana, e de que tamanho e frequência.
+
+> Obs.: as fotos do banner da home e da família (`banner-home`, `presidente`) têm texto e
+> logo gravados na imagem. Usar só recortes sem o texto.
