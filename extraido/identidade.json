@@ -1,0 +1,95 @@
+{
+  "site": "https://www.cooperativaecoserra.com.br/",
+  "extraido_em": "2026-09-30T18:09:22.831Z",
+  "logo": null,
+  "cores_mais_usadas": [
+    {
+      "hex": "#000000",
+      "usos": 168
+    },
+    {
+      "hex": "#0d6efd",
+      "usos": 72
+    },
+    {
+      "hex": "#ffffff",
+      "usos": 50
+    },
+    {
+      "hex": "#212529",
+      "usos": 25
+    },
+    {
+      "hex": "#999999",
+      "usos": 21
+    },
+    {
+      "hex": "#333333",
+      "usos": 16
+    },
+    {
+      "hex": "#eff7d7",
+      "usos": 14
+    },
+    {
+      "hex": "#eeeeee",
+      "usos": 6
+    },
+    {
+      "hex": "#111111",
+      "usos": 3
+    }
+  ],
+  "fontes": [
+    "\"Open Sans\", sans-serif"
+  ],
+  "google_fonts": [
+    "https://fonts.googleapis.com/",
+    "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,200;1,500&display=swap"
+  ],
+  "contatos": {
+    "telefones": [
+      "(49) 3224-4699",
+      "49 99979-4672"
+    ],
+    "emails": [
+      "cooperativaecoserra@yahoo.com.br"
+    ],
+    "whatsapp": [],
+    "redes": [],
+    "mapa": [],
+    "cnpj": [
+      "03.621.936/0003-90"
+    ]
+  },
+  "menu": [
+    {
+      "texto": "Home",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/"
+    },
+    {
+      "texto": "Quem Somos",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/quem-somos"
+    },
+    {
+      "texto": "Produtos",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/produtos"
+    },
+    {
+      "texto": "Fotos",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/galeria-de-fotos"
+    },
+    {
+      "texto": "Parceiros",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/parceiros"
+    },
+    {
+      "texto": "Fale Conosco",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/fale-conosco"
+    },
+    {
+      "texto": "Transparência",
+      "link_antigo": "https://www.cooperativaecoserra.com.br/transparencia"
+    }
+  ]
+}

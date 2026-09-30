@@ -1,0 +1,434 @@
+[
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/assets/img/ecoserra.png",
+    "externa": false,
+    "arquivo": "imagens/ecoserra.png",
+    "alt": "EcoSerra",
+    "fundo_css": false,
+    "largura": 704,
+    "altura": 588,
+    "paginas": [
+      "home",
+      "quem-somos",
+      "produtos",
+      "galeria-de-fotos",
+      "parceiros",
+      "fale-conosco",
+      "transparencia"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/assets/img/ecoserra.png",
+    "bytes": 110953
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/organico.png",
+    "externa": false,
+    "arquivo": "imagens/organico.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 511,
+    "altura": 244,
+    "paginas": [
+      "home",
+      "quem-somos",
+      "produtos",
+      "galeria-de-fotos",
+      "parceiros",
+      "fale-conosco",
+      "transparencia"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/organico.png",
+    "bytes": 56346
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/agricultura-familiar.png",
+    "externa": false,
+    "arquivo": "imagens/agricultura-familiar.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 370,
+    "altura": 500,
+    "paginas": [
+      "home",
+      "quem-somos",
+      "produtos",
+      "galeria-de-fotos",
+      "parceiros",
+      "fale-conosco",
+      "transparencia"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/agricultura-familiar.png",
+    "bytes": 22073
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/slider-2.png",
+    "externa": false,
+    "arquivo": "imagens/slider-2.png",
+    "alt": "Eco",
+    "fundo_css": false,
+    "largura": 1920,
+    "altura": 480,
+    "paginas": [
+      "home"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/slider-2.png",
+    "bytes": 2106237
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/presidente.png",
+    "externa": false,
+    "arquivo": "imagens/presidente.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 960,
+    "altura": 942,
+    "paginas": [
+      "home",
+      "quem-somos"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/presidente.png",
+    "bytes": 1929907
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/assets/img/ecoilha.jpeg",
+    "externa": false,
+    "arquivo": "imagens/ecoilha.jpeg",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 462,
+    "altura": 418,
+    "paginas": [
+      "home"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/assets/img/ecoilha.jpeg",
+    "bytes": 54107
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/banner-home.png",
+    "externa": false,
+    "arquivo": "imagens/banner-home.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 1500,
+    "altura": 485,
+    "paginas": [
+      "home"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/banner-home.png",
+    "bytes": 1642293
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/seja-cooperado.png",
+    "externa": false,
+    "arquivo": "imagens/seja-cooperado.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 828,
+    "altura": 541,
+    "paginas": [
+      "home"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/seja-cooperado.png",
+    "bytes": 530848
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/header-bg.png",
+    "externa": false,
+    "arquivo": "imagens/header-bg.png",
+    "alt": "",
+    "fundo_css": true,
+    "paginas": [
+      "home",
+      "quem-somos",
+      "produtos",
+      "galeria-de-fotos",
+      "parceiros",
+      "fale-conosco",
+      "transparencia"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/header-bg.png",
+    "bytes": 55636
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/footer-bg.png",
+    "externa": false,
+    "arquivo": "imagens/footer-bg.png",
+    "alt": "",
+    "fundo_css": true,
+    "paginas": [
+      "home",
+      "quem-somos",
+      "produtos",
+      "galeria-de-fotos",
+      "parceiros",
+      "fale-conosco",
+      "transparencia"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/footer-bg.png",
+    "bytes": 17077
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/fotos/quem-somos-1.jpeg",
+    "externa": false,
+    "arquivo": "imagens/quem-somos-1.jpeg",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 1040,
+    "altura": 780,
+    "paginas": [
+      "quem-somos"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/fotos/quem-somos-1.jpeg",
+    "bytes": 143812
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/fotos/WhatsApp%20Image%202020-10-27%20at%2016.00.29.jpeg",
+    "externa": false,
+    "arquivo": "imagens/whatsapp-image-2020-10-27-at-16.00.29.jpeg",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 1040,
+    "altura": 780,
+    "paginas": [
+      "quem-somos"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/fotos/WhatsApp%20Image%202020-10-27%20at%2016.00.29.jpeg",
+    "bytes": 138229
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/fotos/quem-somos-2.jpeg",
+    "externa": false,
+    "arquivo": "imagens/quem-somos-2.jpeg",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 1040,
+    "altura": 780,
+    "paginas": [
+      "quem-somos"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/fotos/quem-somos-2.jpeg",
+    "bytes": 151208
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/fotos/escritorio.jpg",
+    "externa": false,
+    "arquivo": "imagens/escritorio.jpg",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 4000,
+    "altura": 3000,
+    "paginas": [
+      "quem-somos"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/fotos/escritorio.jpg",
+    "bytes": 672850
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/urubici.png",
+    "externa": false,
+    "arquivo": "imagens/urubici.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/urubici.png",
+    "bytes": 81370
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/centro-vianei.png",
+    "externa": false,
+    "arquivo": "imagens/centro-vianei.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/centro-vianei.png",
+    "bytes": 230014
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/cisama.png",
+    "externa": false,
+    "arquivo": "imagens/cisama.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/cisama.png",
+    "bytes": 95221
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/conab.png",
+    "externa": false,
+    "arquivo": "imagens/conab.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/conab.png",
+    "bytes": 108123
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/lages-sc.png",
+    "externa": false,
+    "arquivo": "imagens/lages-sc.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/lages-sc.png",
+    "bytes": 152057
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/sicoob.png",
+    "externa": false,
+    "arquivo": "imagens/sicoob.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/sicoob.png",
+    "bytes": 57443
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/slow-food.png",
+    "externa": false,
+    "arquivo": "imagens/slow-food.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/slow-food.png",
+    "bytes": 52153
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/oi-futura.png",
+    "externa": false,
+    "arquivo": "imagens/oi-futura.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/oi-futura.png",
+    "bytes": 103987
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/conexus.png",
+    "externa": false,
+    "arquivo": "imagens/conexus.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/conexus.png",
+    "bytes": 58658
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/unicafes.png",
+    "externa": false,
+    "arquivo": "imagens/unicafes.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/unicafes.png",
+    "bytes": 74810
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/mesa-brasil.png",
+    "externa": false,
+    "arquivo": "imagens/mesa-brasil.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/mesa-brasil.png",
+    "bytes": 149107
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/consea.png",
+    "externa": false,
+    "arquivo": "imagens/consea.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/consea.png",
+    "bytes": 88348
+  },
+  {
+    "url_original": "https://www.cooperativaecoserra.com.br/public/files/parceiros/ecovida.png",
+    "externa": false,
+    "arquivo": "imagens/ecovida.png",
+    "alt": "",
+    "fundo_css": false,
+    "largura": 979,
+    "altura": 478,
+    "paginas": [
+      "parceiros"
+    ],
+    "e_logo": false,
+    "url_baixada": "https://www.cooperativaecoserra.com.br/public/files/parceiros/ecovida.png",
+    "bytes": 157002
+  }
+]

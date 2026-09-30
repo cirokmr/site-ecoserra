@@ -1,0 +1,178 @@
+[
+  {
+    "url": "https://www.cooperativaecoserra.com.br/",
+    "caminho": "/",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/home.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/quem-somos",
+    "caminho": "/quem-somos",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/quem-somos.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/produtos",
+    "caminho": "/produtos",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/produtos.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/galeria-de-fotos",
+    "caminho": "/galeria-de-fotos",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/galeria-de-fotos.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/parceiros",
+    "caminho": "/parceiros",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/parceiros.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/fale-conosco",
+    "caminho": "/fale-conosco",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/fale-conosco.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/transparencia",
+    "caminho": "/transparencia",
+    "status": 200,
+    "redireciona_para": null,
+    "titulo": "Ecoserra - Cooperativa Agrícola",
+    "arquivo": "paginas/transparencia.md",
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/congelados/aipim-descacado-e-congelado/8",
+    "caminho": "/congelados/aipim-descacado-e-congelado/8",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/congelados/amora-conglada/9",
+    "caminho": "/congelados/amora-conglada/9",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/congelados/morango-in-natura/10",
+    "caminho": "/congelados/morango-in-natura/10",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/frutas/bana-branca-verdade/6",
+    "caminho": "/frutas/bana-branca-verdade/6",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/frutas/banana-branca-madura/5",
+    "caminho": "/frutas/banana-branca-madura/5",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/frutas/maca-a/7",
+    "caminho": "/frutas/maca-a/7",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/produtos-in-natura/abobrinha-caseira/2",
+    "caminho": "/produtos-in-natura/abobrinha-caseira/2",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/produtos-in-natura/acafrao/3",
+    "caminho": "/produtos-in-natura/acafrao/3",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/produtos-in-natura/alface-americana/4",
+    "caminho": "/produtos-in-natura/alface-americana/4",
+    "status": 405,
+    "redireciona_para": null,
+    "titulo": null,
+    "arquivo": null,
+    "erro": null,
+    "mesma_pagina_que": null,
+    "nova_url": null
+  }
+]
