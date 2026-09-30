@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/abobrinha-caseira.jpg",
+    "destino": "public/img/loja/abobrinha-caseira.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/acafracao.jpg",
+    "destino": "public/img/loja/acafrao.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/aipim-d.jpeg",
+    "destino": "public/img/loja/aipim-descascado-congelado.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/alface-americana.jpeg",
+    "destino": "public/img/loja/alface-americana.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/amora.jpeg",
+    "destino": "public/img/loja/amora-congelada.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/banana-branca-madura.jpeg",
+    "destino": "public/img/loja/banana-branca-madura.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/banana-branca-verde.jpeg",
+    "destino": "public/img/loja/banana-branca-verde.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/maca-a.jpg",
+    "destino": "public/img/loja/maca-categoria-a.webp",
+    "erro": "HTTP 404"
+  },
+  {
+    "url": "https://www.cooperativaecoserra.com.br/public/files/produtos/morango.jpg",
+    "destino": "public/img/loja/morango.webp",
+    "erro": "HTTP 404"
+  }
+]
