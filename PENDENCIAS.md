@@ -33,3 +33,11 @@
 - [ ] Abrir a loja no painel quando os produtos estiverem cadastrados (API responde 503 com a loja fechada; o site continua mostrando o preço do catálogo).
 - [ ] Pagamento (Pix pelo Mercado Pago): o botão "Finalizar pedido" está desligado até o checkout existir.
 - [ ] Domínio: `site.json → url` já está como www.cooperativaecoserra.com.br; apontar o DNS para a Vercel na entrega.
+
+## Foto da abertura (hero)
+- [ ] A última foto do hero é provisória: araucária no Parque Nacional de São Joaquim, de Raphael
+      Sombrio (CC BY-SA 4.0, crédito no rodapé). A Tombo vai fotografar a serra na próxima visita;
+      quando chegar, trocar `public/img/home/araucaria-sao-joaquim.webp` (WebP ≤ 500 KB, ~2400 px de
+      largura) e tirar o crédito de `site.json → creditos`.
+- [ ] As outras duas fotos do hero (banca e estufa) têm ~1000 px e ficam suaves em telas grandes:
+      pedir à cooperativa os originais em alta resolução.

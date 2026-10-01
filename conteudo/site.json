@@ -84,8 +84,8 @@
             "alt": "Família de agricultores cooperados numa estufa de alface"
           },
           {
-            "src": "/img/home/caixas-no-galpao.webp",
-            "alt": "Galpão da Ecoserra com caixas de maçã, cenoura, alface e brócolis separadas para entrega"
+            "src": "/img/home/araucaria-sao-joaquim.webp",
+            "alt": "Araucária diante dos paredões do Parque Nacional de São Joaquim, na Serra Catarinense, sob luz dourada"
           }
         ]
       },
@@ -221,6 +221,12 @@
       }
     ]
   },
+  "creditos": [
+    {
+      "texto": "Foto da abertura: Raphael Sombrio, Parque Nacional de São Joaquim (CC BY-SA 4.0, Wikimedia Commons)",
+      "url": "https://commons.wikimedia.org/wiki/File:Parque_Nacional_de_S%C3%A3o_Joaquim_-_Raphael_Sombrio_(02).jpg"
+    }
+  ],
   "naoEncontrada": {
     "titulo": "Página não encontrada",
     "texto": "Esta página não existe ou mudou de endereço. Conheça a cooperativa e o que as famílias cooperadas produzem.",
