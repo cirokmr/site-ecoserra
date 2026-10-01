@@ -150,6 +150,12 @@ export type Site = {
   noticias: TextosLista & { formatoData?: 'curto' | 'longo'; capaInteira?: boolean };
   /** textos da loja (vitrine em /loja/, produto, carrinho) */
   loja?: {
+    /**
+     * false = loja desligada: /loja/ e /carrinho/ não são gerados (ver next.config.ts) e somem
+     * do site os links para eles (menu, rodapé, 404), o carrinho do menu e a seção
+     * "loja-destaques" da home. Sem o campo, a loja fica ligada.
+     */
+    ativa?: boolean;
     rotulo: string;
     titulo: string;
     destaque?: string;
@@ -190,7 +196,34 @@ export type Site = {
   creditos?: { texto: string; url?: string }[];
 };
 
-export const site = dados as unknown as Site;
+const bruto = dados as unknown as Site;
+
+/** A loja está no ar? (site.json → loja.ativa; sem o campo, ligada se houver o bloco "loja") */
+export const lojaAtiva = !!bruto.loja && bruto.loja.ativa !== false;
+
+/** Endereços da loja: /loja/…, /carrinho/ */
+export const ehRotaDaLoja = (href: string) => /^\/(loja|carrinho)(\/|$)/.test(href);
+
+// Com a loja desligada, nenhum link do site.json leva a ela (as páginas nem existem).
+const visivel = (l?: Link): l is Link => !!l && (lojaAtiva || !ehRotaDaLoja(l.href));
+
+export const site: Site = lojaAtiva
+  ? bruto
+  : {
+      ...bruto,
+      nav: bruto.nav.filter(visivel),
+      home: {
+        ...bruto.home,
+        secoes: bruto.home.secoes
+          .filter((s) => s.tipo !== 'loja-destaques')
+          .map((s) => (s.tipo === 'texto' && s.botao && !visivel(s.botao) ? { ...s, botao: undefined } : s)),
+      },
+      rodape: { ...bruto.rodape, links: bruto.rodape.links?.filter(visivel) },
+      naoEncontrada: {
+        ...bruto.naoEncontrada,
+        link2: visivel(bruto.naoEncontrada.link2) ? bruto.naoEncontrada.link2 : undefined,
+      },
+    };
 
 /** Textos da loja, com padrões para sites sem o bloco "loja" no site.json. */
 export const textosLoja: NonNullable<Site['loja']> = {

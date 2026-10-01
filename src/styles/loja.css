@@ -366,7 +366,7 @@
 .carrinho-link sup { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; opacity: 0.8; }
 .nav__carrinho-cel { display: none; justify-self: end; }
 @media (max-width: 860px) {
-  .nav { grid-template-columns: 1fr auto auto; gap: 20px; }
+  .nav:has(.nav__carrinho-cel) { grid-template-columns: 1fr auto auto; gap: 20px; }
   .nav__carrinho-cel { display: inline-flex; }
 }
 

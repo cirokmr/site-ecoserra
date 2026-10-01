@@ -1,12 +1,22 @@
 {
-  "_leia": "URLs do site antigo (extraido/urls-antigas.json) → páginas novas. Depois de mudar: node scripts/gerar-redirects.mjs",
+  "_leia": "URLs do site antigo (extraido/urls-antigas.json) → páginas novas. As listadas em \"temporarios\" saem como 302 (a loja volta em 2027: aí os produtos voltam para /loja/ e as regras de /loja/* e /carrinho/* saem daqui). Depois de mudar: node scripts/gerar-redirects.mjs",
   "redirects": {
     "/quem-somos": "/sobre/",
     "/galeria-de-fotos": "/sobre/",
-    "/produtos": "/loja/",
-    "/congelados/*": "/loja/",
-    "/frutas/*": "/loja/",
-    "/produtos-in-natura/*": "/loja/",
+    "/produtos": "/sobre/",
+    "/congelados/*": "/sobre/",
+    "/frutas/*": "/sobre/",
+    "/produtos-in-natura/*": "/sobre/",
+    "/loja/*": "/sobre/",
+    "/carrinho/*": "/sobre/",
     "/fale-conosco": "/contato/"
-  }
+  },
+  "temporarios": [
+    "/produtos",
+    "/congelados/*",
+    "/frutas/*",
+    "/produtos-in-natura/*",
+    "/loja/*",
+    "/carrinho/*"
+  ]
 }

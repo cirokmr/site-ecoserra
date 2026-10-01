@@ -14,23 +14,33 @@
     },
     {
       "source": "/produtos",
-      "destination": "/loja/",
-      "permanent": true
+      "destination": "/sobre/",
+      "permanent": false
     },
     {
       "source": "/congelados/:splat*",
-      "destination": "/loja/",
-      "permanent": true
+      "destination": "/sobre/",
+      "permanent": false
     },
     {
       "source": "/frutas/:splat*",
-      "destination": "/loja/",
-      "permanent": true
+      "destination": "/sobre/",
+      "permanent": false
     },
     {
       "source": "/produtos-in-natura/:splat*",
-      "destination": "/loja/",
-      "permanent": true
+      "destination": "/sobre/",
+      "permanent": false
+    },
+    {
+      "source": "/loja/:splat*",
+      "destination": "/sobre/",
+      "permanent": false
+    },
+    {
+      "source": "/carrinho/:splat*",
+      "destination": "/sobre/",
+      "permanent": false
     },
     {
       "source": "/fale-conosco",

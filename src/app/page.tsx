@@ -62,6 +62,7 @@ export default function Home() {
           case 'marcos':
             return <Marcos key={i} dados={s} />;
           case 'loja-destaques':
+            // com a loja desligada (site.json → loja.ativa: false) a seção nem chega aqui
             return <LojaDestaques key={i} dados={s} />;
           default:
             return null;

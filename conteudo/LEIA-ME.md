@@ -73,3 +73,18 @@ endereço) ou `"/categoria/*": "/noticias/"` (tudo para uma página). O
 `scripts/gerar-redirects.mjs` escreve a versão da Vercel (`/news/:splat*`) no
 `vercel.json` e preserva as outras chaves dele (ex.: `"git"`); o `npm run checar` conta
 as URLs antigas cobertas pelo curinga.
+
+Redirecionamento **temporário** (302, para uma página que volta depois): liste o endereço
+antigo em `"temporarios"`, ao lado de `"redirects"`:
+`{ "redirects": { "/produtos": "/sobre/" }, "temporarios": ["/produtos"] }`. Os outros
+continuam 301 (permanentes).
+
+## Loja ligada e desligada (`site.json → loja.ativa`)
+
+Com `"ativa": false` no bloco `loja`, o site sai **sem loja**: as páginas `/loja/…` e
+`/carrinho/` nem são geradas (elas se chamam `page.loja.tsx` e o `next.config.ts` só as
+compila com a loja ligada), e somem o link do menu, o carrinho, a seção `loja-destaques` da
+home e qualquer link do `site.json` para `/loja/` ou `/carrinho/`. O código da loja e o
+`conteudo/loja/catalogo.json` continuam no repositório. Para religar: `"ativa": true` (ou
+apague o campo) e tire de `redirects.json` as regras que mandam `/loja/*` e `/carrinho/*`
+para outra página.

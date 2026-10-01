@@ -1,5 +1,23 @@
 # Pendências — Cooperativa Ecoserra
 
+> **Loja desligada (01/10/2026):** a Ecoserra decidiu lançar a loja só no ano que vem. O site
+> está no ar **sem loja** (`conteudo/site.json → loja.ativa: false`): não há /loja/ nem /carrinho/,
+> nem link, carrinho, seção da home ou preço. O código e o catálogo continuam no repositório.
+> Os endereços de produto do site antigo (`/produtos`, `/congelados/*`, `/frutas/*`,
+> `/produtos-in-natura/*`) e `/loja/*`, `/carrinho/*` levam para `/sobre/` com redirecionamento
+> **temporário (302)**. As pendências da loja abaixo ficam para o lançamento.
+
+### Para religar a loja
+1. `conteudo/site.json → loja.ativa: true`.
+2. `redirects.json`: apagar as regras `/loja/*` e `/carrinho/*`; voltar `/produtos`,
+   `/congelados/*`, `/frutas/*` e `/produtos-in-natura/*` para `/loja/` e tirá-las de
+   `"temporarios"` (voltam a ser 301); rodar `node scripts/gerar-redirects.mjs`.
+3. Home: renumerar os rótulos (`Banca 02 — EcoIlha` → `Banca 03`, `Banca 03 — Seja cooperado`
+   → `Banca 04`), porque a vitrine volta a ser a Banca 02.
+4. 404 (`naoEncontrada`): se quiser, voltar o botão "Ir para a loja" (`/loja/`).
+5. Rodapé e descrição: voltar a falar da entrega quando as zonas estiverem no painel.
+6. Conferir as pendências da loja abaixo (catálogo real, fotos, entrega, pagamento).
+
 ## Da cooperativa
 - [ ] **Cadastrar os produtos reais no Tombo CMS** (Loja → Produtos): preço, unidade, estoque, foto, marcar "Orgânico" e preencher "Origem" (grupo de base · município). Depois clicar em **"Publicar catálogo no site"**: o catálogo de demonstração (preços de exemplo) é substituído e o aviso "Loja em demonstração" some.
 - [ ] **Fotos dos produtos**: as do site antigo não existem mais no servidor (HTTP 404). Hoje só a maçã tem foto (recorte de uma foto do galpão); os outros mostram "Foto em breve".

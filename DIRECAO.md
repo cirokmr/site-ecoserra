@@ -3,6 +3,12 @@
 > Status: **aprovada em 30/09/2026** (com as respostas da Ecoserra abaixo). Base: extração de 30/09/2026 (`extraido/`) e o
 > protótipo da loja aprovado na conversa inicial.
 
+> **01/10/2026 — loja adiada para o ano que vem.** O site está no ar sem a loja
+> (`site.json → loja.ativa: false`; como religar em `PENDENCIAS.md`). Tudo o que esta direção
+> diz sobre loja, vitrine, etiqueta de preço e carrinho continua valendo para o lançamento.
+> Enquanto isso, a home fica: hero → manifesto (Banca 01) → faixa → EcoIlha (Banca 02) →
+> Seja cooperado (Banca 03).
+
 ## 0. Respostas da Ecoserra (30/09/2026)
 
 1. **Certificação:** todos os produtos à venda são orgânicos certificados → o selo

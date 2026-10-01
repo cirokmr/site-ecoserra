@@ -176,6 +176,10 @@ if (fs.existsSync(arqUrls)) {
     if (destinos.has(c) || destinos.has(cSemQuery) || temCuringa(cSemQuery) || existeNoDist(cSemQuery)) cobertas++;
     else erro(`URL antiga sem destino: ${u.caminho} → crie a página ou adicione em redirects.json`);
   }
+  const { temporarios = [] } = JSON.parse(fs.readFileSync('redirects.json', 'utf8'));
+  for (const t of Array.isArray(temporarios) ? temporarios : []) {
+    if (!(t in redirects)) aviso(`redirects.json: "${t}" está em "temporarios" mas não em "redirects"`);
+  }
   for (const [de, para] of Object.entries(redirects)) {
     if (de.includes('*') && !/\/\*$/.test(de)) aviso(`redirect ${de}: o curinga "*" só funciona no fim, depois de uma barra (ex.: /antigo/*)`);
     // destino com marcador (":splat", ":slug"): confere a parte fixa, antes do marcador

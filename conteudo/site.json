@@ -3,7 +3,7 @@
   "nome": "Ecoserra",
   "nomeCompleto": "Cooperativa Ecoserra",
   "url": "https://www.cooperativaecoserra.com.br",
-  "descricao": "Cooperativa de agricultores familiares agroecológicos da Serra Catarinense. Orgânicos certificados da roça da família para a sua mesa, com entrega.",
+  "descricao": "Cooperativa de agricultores familiares agroecológicos da Serra Catarinense. Orgânicos certificados da roça da família para a sua mesa.",
   "corTema": "#1c3a25",
   "fotos": {
     "tratamento": "natural",
@@ -129,7 +129,7 @@
       {
         "tipo": "texto",
         "tema": "escuro",
-        "rotulo": "Banca 03 — EcoIlha",
+        "rotulo": "Banca 02 — EcoIlha",
         "titulo": {
           "display": "Filial",
           "serif": "Florianópolis"
@@ -143,7 +143,7 @@
       {
         "tipo": "texto",
         "tema": "claro",
-        "rotulo": "Banca 04 — Seja cooperado",
+        "rotulo": "Banca 03 — Seja cooperado",
         "titulo": {
           "display": "O que é necessário",
           "serif": "para ser um cooperado?"
@@ -157,6 +157,7 @@
     ]
   },
   "loja": {
+    "ativa": false,
     "rotulo": "Banca da semana",
     "titulo": "A feira",
     "destaque": "da serra",
@@ -203,7 +204,7 @@
       "display": "Da roça da família",
       "serif": "para a sua mesa."
     },
-    "texto": "Orgânicos certificados da Serra Catarinense, com entrega na Serra e em Florianópolis.",
+    "texto": "Orgânicos certificados das famílias cooperadas da Serra Catarinense.",
     "botao": "Fale com a cooperativa",
     "palavra": "Ecoserra",
     "colunas": {
@@ -222,11 +223,11 @@
   },
   "naoEncontrada": {
     "titulo": "Página não encontrada",
-    "texto": "Esta página não existe ou mudou de endereço. Os produtos do site antigo agora estão na loja.",
+    "texto": "Esta página não existe ou mudou de endereço. Conheça a cooperativa e o que as famílias cooperadas produzem.",
     "botao": "Voltar ao início",
     "link2": {
-      "rotulo": "Ir para a loja",
-      "href": "/loja/"
+      "rotulo": "Conheça a Ecoserra",
+      "href": "/sobre/"
     }
   }
 }
