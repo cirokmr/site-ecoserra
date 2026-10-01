@@ -1,6 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
+  "git": {
+    "deploymentEnabled": {
+      "teste-loja-ativa": false
+    }
+  },
   "redirects": [
     {
       "source": "/quem-somos",

@@ -157,7 +157,7 @@
     ]
   },
   "loja": {
-    "ativa": false,
+    "ativa": true,
     "rotulo": "Banca da semana",
     "titulo": "A feira",
     "destaque": "da serra",
