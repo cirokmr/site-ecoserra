@@ -52,7 +52,7 @@
     "ogAlt": "Família de agricultores cooperados da Ecoserra numa estufa de alface"
   },
   "intro": {
-    "ativa": false,
+    "ativa": true,
     "esquerda": "Cooperativa Ecoserra",
     "direita": "Desde 1999",
     "rotulo": "Abrindo a feira"
@@ -61,6 +61,7 @@
     "secoes": [
       {
         "tipo": "hero",
+        "expandir": false,
         "palavra": "Ecoserra",
         "nomeH1": "Cooperativa Ecoserra — orgânicos da Serra Catarinense",
         "pergunta": "O que a serra «colheu» esta semana?",
@@ -71,7 +72,7 @@
         "topo": [
           "Desde 1999",
           "330+ famílias",
-          "Role para abrir ↓"
+          "Role para conhecer ↓"
         ],
         "base": "Orgânicos certificados · Rede Ecovida · Serra Catarinense e Florianópolis",
         "imagens": [

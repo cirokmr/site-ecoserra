@@ -22,6 +22,8 @@ export type SecaoHero = {
   topo?: string[];
   base?: string;
   imagens: Imagem[];
+  /** false = sem a cena de rolagem (seção presa + círculo que vira tela cheia): a foto final já abre em tela cheia. Padrão: true */
+  expandir?: boolean;
 };
 export type SecaoManifesto = {
   tipo: 'manifesto';
