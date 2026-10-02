@@ -9,6 +9,17 @@ import CarrinhoLink from '@/components/loja/CarrinhoLink';
 
 type Props = { contagens: Record<string, number> };
 
+// Ícones dos links (site.json → nav[].icone).
+function Icone({ nome }: { nome: 'documento' }) {
+  if (nome !== 'documento') return null;
+  return (
+    <svg className="nav__icone" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+      <path d="M14 3v5h5M9 13h6M9 17h4" />
+    </svg>
+  );
+}
+
 function useHoraLocal() {
   const [hora, setHora] = useState('--:--');
   useEffect(() => {
@@ -91,7 +102,13 @@ export default function Nav({ contagens }: Props) {
 
         <nav className="nav__links" aria-label="Principal">
           {site.nav.map((item) => (
-            <Link key={item.href} href={item.href} className="u-link" aria-current={ativo(item.href) ? 'page' : undefined}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={item.icone ? 'nav__destaque' : 'u-link'}
+              aria-current={ativo(item.href) ? 'page' : undefined}
+            >
+              {item.icone && <Icone nome={item.icone} />}
               {item.rotulo}
               {contagens[item.href] ? <sup>{String(contagens[item.href]).padStart(2, '0')}</sup> : null}
             </Link>
@@ -113,6 +130,7 @@ export default function Nav({ contagens }: Props) {
           </Link>
           {site.nav.map((item, i) => (
             <Link key={item.href} href={item.href} className="display">
+              {item.icone && <Icone nome={item.icone} />}
               {item.rotulo} <span className="mono">{String(i + 1).padStart(2, '0')}</span>
             </Link>
           ))}

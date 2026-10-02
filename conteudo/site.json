@@ -3,13 +3,18 @@
   "nome": "Ecoserra",
   "nomeCompleto": "Cooperativa Ecoserra",
   "url": "https://www.cooperativaecoserra.com.br",
-  "descricao": "Cooperativa de agricultores familiares agroecológicos da Serra Catarinense. Orgânicos certificados da roça da família para a sua mesa.",
+  "descricao": "Cooperativa de agricultores familiares agroecológicos da Serra Catarinense. Orgânicos certificados da roça para sua família.",
   "corTema": "#1c3a25",
+  "aparencia": "clara",
   "fotos": {
     "tratamento": "natural",
     "hero": "natural"
   },
-  "logo": null,
+  "logo": {
+    "src": "/img/logo-ecoserra.webp",
+    "largura": 704,
+    "altura": 588
+  },
   "marca": {
     "viewBox": "0 0 100 100",
     "d": "M50 94 V10 M36 17 Q50 23 64 17 M24 32 Q50 41 76 32 M12 49 Q50 60 88 49",
@@ -45,6 +50,11 @@
     {
       "rotulo": "Contato",
       "href": "/contato/"
+    },
+    {
+      "rotulo": "Transparência",
+      "href": "/transparencia/",
+      "icone": "documento"
     }
   ],
   "seo": {
@@ -61,18 +71,17 @@
     "secoes": [
       {
         "tipo": "hero",
-        "expandir": false,
-        "palavra": "Ecoserra",
+        "tamanho": "discreto",
+        "palavra": "Cooperativa Ecoserra",
         "nomeH1": "Cooperativa Ecoserra — orgânicos da Serra Catarinense",
-        "pergunta": "O que a serra «colheu» esta semana?",
         "legenda": {
-          "display": "Da roça da família",
-          "serif": "para a sua mesa."
+          "display": "Da roça",
+          "serif": "para sua família."
         },
         "topo": [
           "Desde 1999",
           "330+ famílias",
-          "Role para conhecer ↓"
+          "Role para abrir ↓"
         ],
         "base": "Orgânicos certificados · Rede Ecovida · Serra Catarinense e Florianópolis",
         "imagens": [
@@ -93,21 +102,122 @@
       {
         "tipo": "manifesto",
         "tema": "claro",
-        "rotulo": "Banca 01 — Quem somos",
+        "rotulo": "Quem somos",
         "titulo": {
           "display": "Fortalecendo a agricultura familiar",
           "serif": "e incentivando a produção orgânica."
         },
         "texto": "A Ecoserra é uma Cooperativa de Agricultores e Agricultoras Familiares Agroecológicos com objetivo de promover a organização da produção, agroindustrialização, da compra e venda de produtos e insumos agroecológicos/orgânicos, artesanais e coloniais.",
         "figura": {
-          "src": "/img/home/familia-estufa.webp",
-          "alt": "Família de agricultores cooperados, com o filho no colo, numa estufa de alface",
-          "legenda": "Fig. 01 — Família cooperada na estufa"
+          "src": "/img/home/banca-da-cooperativa.webp",
+          "alt": "Banca da Ecoserra com limões, tomates, maçãs e verduras",
+          "legenda": "Banca da cooperativa"
+        }
+      },
+      {
+        "tipo": "logos",
+        "tema": "escuro",
+        "rotulo": "Selos e parceiros",
+        "titulo": {
+          "display": "Certificação",
+          "serif": "e trabalho em rede."
+        },
+        "texto": "Os produtos das famílias cooperadas são certificados pela Rede Ecovida de Agroecologia. A cooperativa trabalha articulada com redes, instituições e prefeituras da Serra Catarinense.",
+        "grupos": [
+          {
+            "nome": "Selos",
+            "itens": [
+              {
+                "src": "/img/logos/ecovida.webp",
+                "alt": "Rede Ecovida de Agroecologia",
+                "fundo": "#f5ffff"
+              },
+              {
+                "src": "/img/logos/organico.webp",
+                "alt": "Selo Produto Orgânico Brasil",
+                "fundo": "#ffffff"
+              },
+              {
+                "src": "/img/logos/agricultura-familiar.webp",
+                "alt": "Selo Agricultura Familiar Brasil",
+                "fundo": "#205b33"
+              }
+            ]
+          },
+          {
+            "nome": "Parceiros",
+            "itens": [
+              {
+                "src": "/img/logos/unicafes.webp",
+                "alt": "UNICAFES",
+                "fundo": "#ffffff"
+              },
+              {
+                "src": "/img/logos/slow-food.webp",
+                "alt": "Slow Food Brasil",
+                "fundo": "#4f4f4f"
+              },
+              {
+                "src": "/img/logos/conab.webp",
+                "alt": "Conab — Companhia Nacional de Abastecimento",
+                "fundo": "#fcfeff"
+              },
+              {
+                "src": "/img/logos/sicoob.webp",
+                "alt": "SICOOB Credicaru",
+                "fundo": "#ffffff"
+              },
+              {
+                "src": "/img/logos/mesa-brasil.webp",
+                "alt": "Mesa Brasil SESC",
+                "fundo": "#f7fff7"
+              },
+              {
+                "src": "/img/logos/centro-vianei.webp",
+                "alt": "Centro Vianei de Educação Popular",
+                "fundo": "#efedec"
+              },
+              {
+                "src": "/img/logos/consea.webp",
+                "alt": "CONSEA/SC",
+                "fundo": "#f2fefc"
+              },
+              {
+                "src": "/img/logos/cisama.webp",
+                "alt": "CISAMA — Consórcio Intermunicipal Serra Catarinense",
+                "fundo": "#f2fefc"
+              },
+              {
+                "src": "/img/logos/conexus.webp",
+                "alt": "Conexsus — Instituto Conexões Sustentáveis",
+                "fundo": "#f6f6f6"
+              },
+              {
+                "src": "/img/logos/oi-futura.webp",
+                "alt": "Instituto Oi Futuro",
+                "fundo": "#fff9f7"
+              },
+              {
+                "src": "/img/logos/lages-sc.webp",
+                "alt": "Prefeitura de Lages",
+                "fundo": "#005ba5"
+              },
+              {
+                "src": "/img/logos/urubici.webp",
+                "alt": "Prefeitura de Urubici",
+                "fundo": "#fffffa"
+              }
+            ]
+          }
+        ],
+        "link": {
+          "rotulo": "Conheça os parceiros",
+          "href": "/parceiros/"
         }
       },
       {
         "tipo": "loja-destaques",
-        "rotulo": "Banca 02 — Da roça",
+        "rotulo": "Da roça",
         "titulo": {
           "display": "Colheita",
           "serif": "da semana"
@@ -116,35 +226,29 @@
         "link": "Ver a feira inteira"
       },
       {
-        "tipo": "faixa",
-        "tema": "destaque",
-        "rotulo": "O que nos move",
-        "palavras": [
-          "Agroecologia",
-          "Agricultura familiar",
-          "Certificação participativa",
-          "Desde 1999"
-        ],
-        "estilo": "apagado"
-      },
-      {
         "tipo": "texto",
-        "tema": "escuro",
-        "rotulo": "Banca 02 — EcoIlha",
+        "tema": "claro",
+        "rotulo": "Ecoilha",
         "titulo": {
           "display": "Filial",
-          "serif": "Florianópolis"
+          "serif": "Grande Florianópolis"
         },
-        "texto": "A EcoIlha é a filial da Ecoserra para a região da Grande Florianópolis. Na EcoIlha disponibilizamos produtos dos produtores da região de Florianópolis como também dos produtores da Serra Catarinense. Produtos orgânicos e selecionados para que você e sua família tenham o melhor em sua mesa.",
+        "texto": "A filial Ecoilha foi constituída para atender a Grande Florianópolis, com produtos orgânicos selecionados para que você e sua família tenham o melhor em sua casa. Atende também a rede municipal e estadual de ensino da região, pelo Programa Nacional de Alimentação Escolar (PNAE), e fornece alimentos para as cozinhas solidárias, pelo Programa de Aquisição de Alimentos (PAA).",
         "botao": {
           "rotulo": "Fale conosco",
           "href": "/contato/"
+        },
+        "figura": {
+          "src": "/img/home/ecoilha.webp",
+          "alt": "Logotipo da Ecoilha, filial da Ecoserra na Grande Florianópolis",
+          "ajuste": "conter",
+          "fundo": "#ffffff"
         }
       },
       {
         "tipo": "texto",
-        "tema": "claro",
-        "rotulo": "Banca 03 — Seja cooperado",
+        "tema": "escuro",
+        "rotulo": "Seja cooperado",
         "titulo": {
           "display": "O que é necessário",
           "serif": "para ser um cooperado?"
@@ -153,6 +257,24 @@
         "botao": {
           "rotulo": "Quero fazer parte",
           "href": "/seja-cooperado/"
+        },
+        "figura": {
+          "src": "/img/home/familia-estufa.webp",
+          "alt": "Família de agricultores cooperados, com o filho no colo, numa estufa de alface"
+        }
+      },
+      {
+        "tipo": "texto",
+        "tema": "claro",
+        "rotulo": "Transparência",
+        "titulo": {
+          "display": "Prestação de contas",
+          "serif": "das parcerias públicas."
+        },
+        "texto": "Termo de colaboração com o Ministério do Desenvolvimento e Assistência Social (MDS) para as cozinhas solidárias: valores, parcelas e equipe, conforme a Lei nº 13.019 de 2014.",
+        "botao": {
+          "rotulo": "Ver transparência",
+          "href": "/transparencia/"
         }
       }
     ]
@@ -202,12 +324,11 @@
   "rodape": {
     "rotulo": "Fale conosco",
     "titulo": {
-      "display": "Da roça da família",
-      "serif": "para a sua mesa."
+      "display": "Da roça",
+      "serif": "para sua família."
     },
     "texto": "Orgânicos certificados das famílias cooperadas da Serra Catarinense.",
     "botao": "Fale com a cooperativa",
-    "palavra": "Ecoserra",
     "colunas": {
       "contato": "Telefones"
     },
@@ -215,12 +336,14 @@
       {
         "rotulo": "Parceiros",
         "href": "/parceiros/"
-      },
-      {
-        "rotulo": "Transparência",
-        "href": "/transparencia/"
       }
-    ]
+    ],
+    "logo": {
+      "src": "/img/logo-ecoserra.webp",
+      "alt": "Cooperativa Ecoserra",
+      "largura": 704,
+      "altura": 588
+    }
   },
   "creditos": [
     {

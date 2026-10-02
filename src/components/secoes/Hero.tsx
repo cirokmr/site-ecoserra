@@ -10,7 +10,8 @@ import type { SecaoHero } from '@/lib/site';
 // se expande até a tela cheia, revelando a legenda. A última foto é a final.
 export default function Hero({ dados }: { dados: SecaoHero }) {
   const ref = useRef<HTMLElement>(null);
-  const { palavra, nomeH1, pergunta, legenda, topo = [], base, imagens, expandir = true } = dados;
+  const { palavra, nomeH1, pergunta, legenda, topo = [], base, imagens, expandir = true, tamanho = 'gigante' } = dados;
+  const discreto = tamanho === 'discreto';
 
   useScene(() => {
     const root = ref.current!;
@@ -50,7 +51,7 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
     // --- abertura ---
     const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
     intro
-      .from(word.chars, { yPercent: 150, duration: 1.6, stagger: 0.07 }, 0)
+      .from(word.chars, { yPercent: 150, duration: 1.6, stagger: discreto ? 0.025 : 0.07 }, 0)
       .fromTo(
         q('.hero__media'),
         { clipPath: 'circle(0% at 50% 40%)' },
@@ -71,7 +72,13 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
     });
     tl.to(q('.hero__media'), { clipPath: 'circle(80% at 50% 40%)', duration: 1 }, 0)
       .fromTo(last, { scale: 1.35 }, { scale: 1, duration: 1 }, 0)
-      .to(word.chars, { yPercent: (i: number) => -60 - i * 28, autoAlpha: 0, duration: 0.55, stagger: 0.03 }, 0)
+      .to(
+        word.chars,
+        discreto
+          ? { yPercent: -40, autoAlpha: 0, duration: 0.3, stagger: 0.008 }
+          : { yPercent: (i: number) => -60 - i * 28, autoAlpha: 0, duration: 0.55, stagger: 0.03 },
+        0,
+      )
       .to(q('.hero__row'), { autoAlpha: 0, duration: 0.25 }, 0)
       .to(q('.hero__shade'), { opacity: 1, duration: 0.5 }, 0.45)
       .to(caption.lines, { yPercent: 0, duration: 0.4, stagger: 0.06, ease: 'power3.out' }, 0.62)
@@ -84,7 +91,7 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
 
   return (
     <section
-      className={`hero tema-escuro${expandir ? '' : ' hero--fixo'}`}
+      className={`hero tema-escuro${expandir ? '' : ' hero--fixo'}${discreto ? ' hero--discreto' : ''}`}
       ref={ref}
       aria-label="Apresentação"
       style={{ '--letras': letras } as React.CSSProperties}

@@ -389,3 +389,57 @@ html.js:not(.reduced) .marco__ano-fill { clip-path: inset(100% 0 0 0); }
   .marco { grid-template-columns: 1fr; align-items: start; }
 }
 .hero__word-txt { display: inline-block; }
+
+/* ---------- Hero "discreto" (site.json → hero.tamanho) ----------
+   O nome em tamanho de título no pé da tela (não a palavra de ponta a ponta) e a
+   legenda final menor. A cena de rolagem continua igual. */
+.hero--discreto { --word: var(--fs-l); }
+.hero--discreto .hero__word { bottom: 7vh; line-height: 1.05; letter-spacing: var(--display-espaco, -0.02em); }
+.hero--discreto .hero__row--bottom { bottom: calc(7vh + var(--word) * 1.2 + 14px); justify-content: center; }
+.hero--discreto .hero__caption { font-size: var(--fs-l); max-width: 18ch; line-height: 1.05; }
+
+/* ---------- Texto com figura (site.json → texto.figura) ---------- */
+.secao-texto__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+.secao-texto__fig { margin: 0; }
+.secao-texto__img { aspect-ratio: 4 / 3; border-radius: 6px; }
+.secao-texto__fig--conter .secao-texto__img {
+  aspect-ratio: auto;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 4vw, 56px);
+}
+.secao-texto__fig--conter .secao-texto__img img { width: 100%; height: auto; max-height: 320px; object-fit: contain; }
+.secao-texto__fig figcaption { margin-top: 12px; }
+@media (max-width: 899px) {
+  .secao-texto__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Logos (selos, parceiros) ---------- */
+.logos__title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.3em; margin: 0 0 18px; max-width: 26ch; }
+.logos__texto { max-width: 52ch; margin: 0 0 clamp(32px, 4vw, 56px); }
+.logos__grupo + .logos__grupo { margin-top: clamp(32px, 4vw, 56px); }
+.logos__nome { margin: 0 0 14px; }
+.logos__grade {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(190px, 40vw), 1fr));
+  gap: 12px;
+}
+.logos__item {
+  aspect-ratio: 2 / 1;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--escuro) 8%, transparent);
+}
+.logos__item a { display: block; width: 100%; height: 100%; }
+.logos__item img { width: 100%; height: 100%; object-fit: contain; }
+.logos__link { margin-top: clamp(28px, 3vw, 44px); font-weight: 600; }

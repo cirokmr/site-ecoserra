@@ -14,25 +14,6 @@ export default function Footer() {
       <div className="wrap">
         <p className="mono eyebrow muted">{rodape.rotulo}</p>
 
-        <div className="footer__lead">
-          <h2 className="footer__title">
-            <span className="display fs-xl" data-split="lines">
-              {rodape.titulo.display}
-            </span>
-            {rodape.titulo.serif && (
-              <span className="serif-i fs-xl footer__title-serif" data-split="words">
-                <Marca className="marca" /> {rodape.titulo.serif}
-              </span>
-            )}
-          </h2>
-          <div className="footer__cta" data-fade>
-            <p className="muted">{rodape.texto}</p>
-            <Link href="/contato/" className="btn" data-magnetic>
-              {rodape.botao} <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-
         {rodape.logo && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -45,6 +26,25 @@ export default function Footer() {
             data-fade
           />
         )}
+
+        <div className="footer__lead">
+          <h2 className="footer__title">
+            <span className="display fs-xl" data-split="lines">
+              {rodape.titulo.display}
+            </span>
+            {rodape.titulo.serif && (
+              <span className="serif-i fs-xl footer__title-serif" data-split="words">
+                {!rodape.logo && <Marca className="marca" />} {rodape.titulo.serif}
+              </span>
+            )}
+          </h2>
+          <div className="footer__cta" data-fade>
+            <p className="muted">{rodape.texto}</p>
+            <Link href="/contato/" className="btn" data-magnetic>
+              {rodape.botao} <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
 
         {contato.email && (
           <a className="footer__mail u-link" href={`mailto:${contato.email}`} data-cursor="E-mail">
@@ -125,11 +125,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer__word" aria-hidden="true" style={{ '--letras': Math.max(3, [...rodape.palavra].length) } as React.CSSProperties}>
-        <span className="display" data-split="chars">
-          {rodape.palavra}
-        </span>
-      </div>
+      {rodape.palavra && (
+        <div className="footer__word" aria-hidden="true" style={{ '--letras': Math.max(3, [...rodape.palavra].length) } as React.CSSProperties}>
+          <span className="display" data-split="chars">
+            {rodape.palavra}
+          </span>
+        </div>
+      )}
 
       <div className="wrap footer__bar mono muted">
         <span>

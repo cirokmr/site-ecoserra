@@ -8,6 +8,7 @@ import Destaques from '@/components/secoes/Destaques';
 import Texto from '@/components/secoes/Texto';
 import Marcos from '@/components/secoes/Marcos';
 import LojaDestaques from '@/components/secoes/LojaDestaques';
+import Logos from '@/components/secoes/Logos';
 import { site } from '@/lib/site';
 import { noticias, projetos, preencher, type Noticia } from '@/lib/content';
 
@@ -61,6 +62,8 @@ export default function Home() {
             return <Texto key={i} dados={s} />;
           case 'marcos':
             return <Marcos key={i} dados={s} />;
+          case 'logos':
+            return <Logos key={i} dados={s} />;
           case 'loja-destaques':
             // com a loja desligada (site.json → loja.ativa: false) a seção nem chega aqui
             return <LojaDestaques key={i} dados={s} />;

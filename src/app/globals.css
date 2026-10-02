@@ -472,3 +472,61 @@ html.reduced .loader { display: none; }
 .hero-natural .hero__media { background: none; isolation: auto; }
 .hero-natural .hero__media::after { content: none; }
 .hero-natural .hero__media .hero__frame { filter: none; mix-blend-mode: normal; }
+
+/* ---------- ícone e botão em destaque no menu (site.json → nav[].icone) ---------- */
+.nav__destaque {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px currentColor;
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav__destaque:hover,
+.nav__destaque[aria-current='page'] { background: var(--escuro); color: var(--claro); box-shadow: none; }
+.nav__icone { width: 17px; height: 17px; flex: none; }
+.menu__links .nav__icone { width: 0.62em; height: 0.62em; align-self: center; }
+
+/* ---------- aparência clara (site.json → "aparencia": "clara") ----------
+   Para clientes que preferem um site claro e limpo: as seções "escuras" viram um
+   claro alternativo (--claro-2), o menu ganha fundo próprio (sem mix-blend), o grão
+   sai e abertura/cortina ficam claras. O que fica sobre foto (capa, "próximo",
+   legenda do hero) continua com texto claro. */
+html.aparencia-clara {
+  --bg: var(--claro);
+  --fg: var(--escuro);
+  --muted: color-mix(in srgb, var(--escuro) 70%, transparent);
+  --line: color-mix(in srgb, var(--escuro) 15%, transparent);
+  color-scheme: light;
+}
+.aparencia-clara body { background: var(--claro); color: var(--escuro); }
+.aparencia-clara .tema-escuro:not(.next, .detail-cover) {
+  --bg: var(--claro-2);
+  --fg: var(--escuro);
+  --muted: color-mix(in srgb, var(--escuro) 70%, transparent);
+  --line: color-mix(in srgb, var(--escuro) 15%, transparent);
+  --acento: var(--destaque-sobre-claro, var(--destaque));
+}
+.aparencia-clara .hero.tema-escuro { --bg: var(--claro); }
+.aparencia-clara .hero__caption { color: var(--claro); }
+.aparencia-clara .nav {
+  mix-blend-mode: normal;
+  color: var(--escuro);
+  background: color-mix(in srgb, var(--claro) 92%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--escuro) 10%, transparent);
+}
+.aparencia-clara .nav__logo img { height: calc(var(--nav-h) - 22px); }
+.aparencia-clara .grain { display: none; }
+.aparencia-clara .menu__links a { font-size: clamp(1.8rem, 8vw, 3.2rem); }
+.aparencia-clara .loader__panel--escuro { background: var(--claro); color: var(--escuro); }
+.aparencia-clara .loader__bar { background: color-mix(in srgb, var(--escuro) 14%, transparent); }
+.aparencia-clara .loader__bar i { background: var(--escuro-3); }
+.aparencia-clara .loader__count { font-size: clamp(3.4rem, 12vw, 9rem); }
+.aparencia-clara .curtain__panel--escuro { background: var(--claro); }
+.aparencia-clara .curtain__nome { color: var(--escuro); }
+.aparencia-clara .cursor { background: var(--escuro-3); }
+.aparencia-clara .cursor[data-mode='link'] { background: color-mix(in srgb, var(--escuro-3) 22%, transparent); }
+.aparencia-clara .cursor__label { color: var(--claro); }

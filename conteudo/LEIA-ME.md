@@ -19,7 +19,7 @@ o site fica como sempre foi.
 
 ### Seções da home (`home.secoes`)
 
-Tipos: `hero`, `manifesto`, `faixa`, `colecao`, `colagem`, `destaques`, `texto`, `marcos`.
+Tipos: `hero`, `manifesto`, `faixa`, `colecao`, `colagem`, `destaques`, `texto`, `marcos`, `logos`.
 
 | Seção | Campo | O que faz |
 |---|---|---|
@@ -27,13 +27,31 @@ Tipos: `hero`, `manifesto`, `faixa`, `colecao`, `colagem`, `destaques`, `texto`,
 | `hero` | `pergunta` com `« »` | as aspas angulares saem na cor de destaque: `"«O que fica» quando a festa acaba?"` |
 | `hero` | `{de}` e `{ate}` em `topo` e `base` | viram o 1º e o último ano das notícias (`"Notícias de {de} a {ate}"`). Vale também em `intro.esquerda` / `intro.direita` |
 | `hero` | `"expandir": false` | desliga a cena de rolagem (seção presa e círculo que se expande): a foto final já abre em tela cheia e a página rola normal |
+| `hero` | `"tamanho": "discreto"` | o nome sai em tamanho de título no pé da tela (não a palavra de ponta a ponta) e a legenda final fica menor; a cena de rolagem continua |
 | `hero` | `nomeH1` | nome completo no `<h1>` só para leitores de tela e buscadores; a palavra gigante continua `palavra` |
 | `manifesto` | `icones: { "src", "alt" }` | faixa de ícones/ilustração da marca abaixo do texto (imagem **clara** sobre transparente; no fundo claro ela é invertida) |
 | `faixa` | `mostrarRotulo: true` | mostra o `rotulo` acima das faixas (sem isso, ele só é lido por leitores de tela) |
 | `faixa` | `tamanho: "medio"` | letras menores, para palavras longas (nomes de parceiros). Listas com mais de 4 palavras mostram todas |
 | `faixa` | `estilo: "apagado"` | 2ª faixa em cor apagada em vez de contorno (use com fontes variáveis) |
+| `texto` | `figura: { "src", "alt", "legenda"?, "ajuste"?, "fundo"? }` | imagem ao lado do texto. `"ajuste": "conter"` mostra a imagem inteira num cartão (logotipos); padrão `"cobrir"` (foto recortada). `fundo` = cor do cartão |
 | `destaques` | `soComCapa: true` | só notícias com foto de capa |
 | `destaques` | `umaPorCategoria: true` | no máximo uma notícia por categoria (a 1ª de cada uma), para variar os temas |
+
+**Seção `logos`** (grade de selos, parceiros, apoiadores):
+
+```json
+{
+  "tipo": "logos",
+  "rotulo": "Selos e parceiros",
+  "titulo": { "display": "Certificação", "serif": "e trabalho em rede." },
+  "texto": "Uma frase.",
+  "grupos": [
+    { "nome": "Selos", "itens": [{ "src": "/img/logos/x.webp", "alt": "Nome da instituição", "fundo": "#ffffff", "href": "https://…" }] }
+  ],
+  "link": { "rotulo": "Conheça os parceiros", "href": "/parceiros/" }
+}
+```
+`fundo` é a cor de fundo do próprio arquivo (o cartão some em volta do logotipo). `titulo`, `texto`, `nome`, `href`, `link` e `tema` (padrão claro) são opcionais.
 
 **Seção `marcos`** (linha do tempo: o ano gigante se preenche com a rolagem):
 
@@ -54,6 +72,10 @@ Tipos: `hero`, `manifesto`, `faixa`, `colecao`, `colagem`, `destaques`, `texto`,
 
 | Campo | O que faz |
 |---|---|
+| `"aparencia": "clara"` | site claro e limpo: as seções "escuras" (e rodapé, capas das páginas) viram um claro alternativo (`--claro-2`), o menu ganha fundo próprio, o grão sai e a abertura/cortina ficam claras |
+| `nav[].icone: "documento"` | ícone antes do rótulo; no menu do computador o link vira um botão em destaque (ex.: Transparência) |
+| `rodape.palavra` | palavra gigante no pé do rodapé; sem o campo, não aparece |
+| `rodape.logo` | logotipo no topo do rodapé (`src`, `alt`, `largura`, `altura`) |
 | `projetos.rotuloNumero` | rótulo do número no topo da página do projeto (padrão: `prefixoNumero`), ex.: `"Nº de registro"` |
 | `projetos.contarImagens: true` | mostra na ficha lateral do projeto quantas imagens ele tem |
 | `noticias.formatoData: "longo"` | datas por extenso: "8 de maio de 2026" (padrão `"curto"`: "08 mai 2026") |

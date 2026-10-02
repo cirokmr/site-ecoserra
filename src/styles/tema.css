@@ -11,13 +11,14 @@
    ========================================================================== */
 
 :root {
-  /* Ecoserra — "a feira da serra" (DIRECAO.md). Cores do logo: verde das colinas e da
-     araucária, o sol amarelo, o vermelho do letreiro. */
+  /* Ecoserra — versão clara (DIRECAO.md, revisão 1). Cores do logo: verde das colinas e
+     da araucária, o sol amarelo, o vermelho do letreiro — o verde e o amarelo como acento
+     sobre fundos claros (site.json → "aparencia": "clara"). */
   --escuro: #1c3a25;
   --escuro-2: #244a30;
   --escuro-3: #2d5a3a;
-  --claro: #f4efe0;
-  --claro-2: #e7dfc8;
+  --claro: #faf8f2;
+  --claro-2: #f0ece1;
   --destaque: #f2c230;
   --destaque-2: #f6d466;
   --apoio: #b8352a;
@@ -32,26 +33,32 @@
   --duo-sombra: var(--escuro);
   --duo-luz: var(--claro);
 
-  /* Bricolage: eixo wdth de 75 a 100, peso até 800. */
+  /* Bricolage: eixo wdth de 75 a 100, peso até 800. Títulos em caixa baixa e peso 700:
+     mais leves e legíveis que a caixa-alta pesada. */
   --display-largura: 100%;
-  --display-peso: 800;
-  --display-em-por-letra: 0.64;
-  --display-espaco: -0.03em;
-  --display-entrelinha: 0.88;
+  --display-peso: 700;
+  --display-caixa: none;
+  --display-em-por-letra: 0.56;
+  --display-espaco: -0.02em;
+  --display-entrelinha: 1.04;
   --cond-largura: 78%;
   --cond-peso: 800;
 
   --gutter: clamp(16px, 3.2vw, 48px);
   --max: 1680px;
-  --nav-h: 76px;
+  --nav-h: 80px;
 
-  --fs-mega: clamp(4.4rem, 24.5vw, 30rem);
-  --fs-xxl: clamp(3rem, 10.5vw, 11rem);
-  --fs-xl: clamp(2.5rem, 6.6vw, 7rem);
-  --fs-l: clamp(1.9rem, 3.8vw, 3.8rem);
-  --fs-m: clamp(1.3rem, 2.1vw, 1.9rem);
+  /* escala contida: títulos de tamanho editorial, sem letras de ponta a ponta */
+  --fs-mega: clamp(3.2rem, 12vw, 11rem);
+  --fs-xxl: clamp(2.4rem, 6vw, 5.6rem);
+  --fs-xl: clamp(2rem, 4.2vw, 3.9rem);
+  --fs-l: clamp(1.6rem, 2.8vw, 2.7rem);
+  --fs-m: clamp(1.12rem, 1.5vw, 1.4rem);
   --fs-body: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
 }
+
+/* Espaço entre seções um pouco menor que o do molde: site mais direto. */
+.section { padding-block: clamp(64px, 9vw, 140px); }

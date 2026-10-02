@@ -5,7 +5,8 @@ import dados from '@conteudo/site.json';
 /** Título em duas vozes: parte "display" (caixa-alta pesada) + parte em serifa itálica. */
 export type Titulo = { display: string; serif?: string };
 export type Imagem = { src: string; alt: string };
-export type Link = { rotulo: string; href: string };
+/** icone: ícone antes do rótulo (no menu, o link vira um botão em destaque). */
+export type Link = { rotulo: string; href: string; icone?: 'documento' };
 export type Rede = { rotulo: string; usuario?: string; href: string };
 /** Fundo de uma seção da home (cada seção tem um padrão; o site.json pode trocar). */
 export type Tema = 'escuro' | 'claro' | 'destaque';
@@ -22,6 +23,11 @@ export type SecaoHero = {
   topo?: string[];
   base?: string;
   imagens: Imagem[];
+  /**
+   * "discreto": o nome aparece em tamanho de título (não a palavra gigante de ponta a ponta)
+   * e a legenda final sai menor. Padrão: "gigante".
+   */
+  tamanho?: 'gigante' | 'discreto';
   /** false = sem a cena de rolagem (seção presa + círculo que vira tela cheia): a foto final já abre em tela cheia. Padrão: true */
   expandir?: boolean;
 };
@@ -75,7 +81,28 @@ export type SecaoDestaques = {
   /** no máximo uma notícia por categoria (a 1ª categoria de cada uma), para variar os temas */
   umaPorCategoria?: boolean;
 };
-export type SecaoTexto = { tipo: 'texto'; tema?: Tema; rotulo?: string; titulo: Titulo; texto?: string; botao?: Link };
+/** figura: imagem ao lado do texto; ajuste "conter" mostra a imagem inteira (logotipos), "cobrir" recorta (fotos, padrão). */
+export type SecaoTexto = {
+  tipo: 'texto';
+  tema?: Tema;
+  rotulo?: string;
+  titulo: Titulo;
+  texto?: string;
+  botao?: Link;
+  figura?: Imagem & { legenda?: string; ajuste?: 'cobrir' | 'conter'; fundo?: string };
+};
+/** Logotipo numa grade; fundo = cor do fundo do próprio arquivo (o cartão some em volta). */
+export type Logo = Imagem & { fundo?: string; href?: string };
+/** Grade de logotipos (selos, parceiros, apoiadores), em grupos com nome. */
+export type SecaoLogos = {
+  tipo: 'logos';
+  tema?: Tema;
+  rotulo?: string;
+  titulo?: Titulo;
+  texto?: string;
+  grupos: { nome?: string; itens: Logo[] }[];
+  link?: Link;
+};
 /** Linha do tempo: anos grandes que "acendem" com a rolagem, cada um com título e texto. */
 export type Marco = { ano: string; titulo: string; texto?: string; imagem?: Imagem & { legenda?: string } };
 export type SecaoMarcos = { tipo: 'marcos'; tema?: Tema; rotulo?: string; titulo: Titulo; itens: Marco[]; link?: Link };
@@ -99,7 +126,8 @@ export type Secao =
   | SecaoColagem
   | SecaoDestaques
   | SecaoTexto
-  | SecaoMarcos;
+  | SecaoMarcos
+  | SecaoLogos;
 
 export type TextosLista = {
   rotulo: string;
@@ -121,6 +149,8 @@ export type Site = {
   url: string;
   descricao: string;
   corTema: string;
+  /** "clara": as seções escuras viram um claro alternativo (--claro-2) e o menu ganha fundo próprio. Padrão: "contraste" */
+  aparencia?: 'contraste' | 'clara';
   logo: { src: string; largura: number; altura: number } | null;
   marca?: { viewBox: string; d: string; traco?: number } | null;
   local?: { cidade: string; fuso: string; pais?: string } | null;
@@ -180,7 +210,8 @@ export type Site = {
     titulo: Titulo;
     texto: string;
     botao: string;
-    palavra: string;
+    /** palavra gigante no pé do rodapé (sem o campo, não aparece) */
+    palavra?: string;
     /** títulos das colunas do rodapé (padrão: Contato, Registro) e o nome dos itens contados */
     colunas?: { contato?: string; registro?: string; itens?: string };
     /** links extras na coluna de navegação do rodapé (páginas fora do menu principal) */
