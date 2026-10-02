@@ -62,3 +62,7 @@
 
 /* Espaço entre seções um pouco menor que o do molde: site mais direto. */
 .section { padding-block: clamp(64px, 9vw, 140px); }
+
+/* Rodapé: logotipo em tamanho de assinatura e o e-mail inteiro numa linha no celular. */
+.footer .footer__logo { width: min(180px, 44vw); }
+.footer .footer__mail { font-size: min(var(--fs-l), 4.9vw); }

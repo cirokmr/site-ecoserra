@@ -9,6 +9,29 @@
 > Enquanto isso, a home fica: hero → manifesto (Banca 01) → faixa → EcoIlha (Banca 02) →
 > Seja cooperado (Banca 03).
 
+> **02/10/2026 — Revisão 1: versão clara.** A Ecoserra achou a primeira versão pesada
+> ("gosto de sites claros, visualmente limpos e funcionais"). O que muda em relação ao
+> conceito abaixo (o resto continua valendo):
+>
+> - **Aparência clara** (`site.json → "aparencia": "clara"`): fundos `--claro` (#FAF8F2) e
+>   `--claro-2` (#F0ECE1) alternados; o verde e o amarelo só como acento (botões, ícones,
+>   selos). Rodapé e capas das páginas também claros. Menu com fundo próprio e o logo.
+> - **Tipografia contida:** títulos em caixa baixa, peso 700, escala menor (`tema.css`).
+>   Nada de palavra de ponta a ponta: sem o ECOSERRA gigante no hero e no rodapé, sem o
+>   letreiro correndo ("faixa").
+> - **Abertura:** a cliente gostou da foto abrindo ao rolar — fica. Sem a pergunta «colheu»;
+>   o nome "Cooperativa Ecoserra" em tamanho de título (`hero.tamanho: "discreto"`).
+> - **Frase da marca:** "Da roça para sua família." (correção da cliente; antes era "Da roça
+>   da família para a sua mesa").
+> - **Rótulos simples:** "Quem somos", "Ecoilha", "Seja cooperado" (sai a numeração de bancas).
+> - **Logos:** seção `logos` na home com os selos (Rede Ecovida, Orgânico Brasil, Agricultura
+>   Familiar) e os 12 parceiros, com os arquivos do site antigo.
+> - **Ecoilha** (com i minúsculo): texto enviado pela cooperativa (filial da Grande
+>   Florianópolis; PNAE na rede de ensino; PAA para as cozinhas solidárias) + logotipo.
+> - **Transparência** é obrigatória: no menu com ícone e com um atalho na home.
+> - Home: hero → Quem somos → Selos e parceiros → Ecoilha → Seja cooperado (com foto) →
+>   Transparência.
+
 ## 0. Respostas da Ecoserra (30/09/2026)
 
 1. **Certificação:** todos os produtos à venda são orgânicos certificados → o selo

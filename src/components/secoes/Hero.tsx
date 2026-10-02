@@ -55,7 +55,7 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
       .fromTo(
         q('.hero__media'),
         { clipPath: 'circle(0% at 50% 40%)' },
-        { clipPath: 'circle(12% at 50% 40%)', duration: 1.6, ease: 'expo.inOut' },
+        { clipPath: `circle(${discreto ? 17 : 12}% at 50% 40%)`, duration: 1.6, ease: 'expo.inOut' },
         0.15,
       )
       .from(q('.hero__row > *'), { autoAlpha: 0, y: 12, duration: 1, stagger: 0.06 }, 0.8);

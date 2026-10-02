@@ -22,9 +22,11 @@
 - [ ] **Cadastrar os produtos reais no Tombo CMS** (Loja → Produtos): preço, unidade, estoque, foto, marcar "Orgânico" e preencher "Origem" (grupo de base · município). Depois clicar em **"Publicar catálogo no site"**: o catálogo de demonstração (preços de exemplo) é substituído e o aviso "Loja em demonstração" some.
 - [ ] **Fotos dos produtos**: as do site antigo não existem mais no servidor (HTTP 404). Hoje só a maçã tem foto (recorte de uma foto do galpão); os outros mostram "Foto em breve".
 - [ ] Fotos das famílias (toparam aparecer) para a procedência e a página Sobre.
-- [ ] Logo em vetor (SVG/PDF): o atual é pequeno e tem fundo branco. Por isso o menu usa o nome em texto.
+- [ ] Logo em vetor (SVG/PDF): o menu e o rodapé já usam o logotipo do site antigo (PNG com fundo transparente, 704 px), mas um vetor fica mais nítido. O da Ecoilha tem fundo branco.
+- [ ] **Logos dos parceiros em melhor qualidade** (revisão 1): a home e a página Parceiros usam os arquivos do site antigo (979×478, com fundo). Se a cooperativa tiver outros parceiros ou versões novas, trocar em `public/img/logos/` e na seção `logos` do `site.json`.
+- [ ] Confirmar o texto da Ecoilha como ficou no site (revisão 1: só pontuação e "Grande Florianópolis" com maiúscula; as siglas PNAE e PAA entraram junto dos nomes dos programas).
 - [ ] Zonas e dias de entrega (Serra Catarinense e Florianópolis) no painel: Loja → Entrega.
-- [ ] Confirmar o WhatsApp de pedidos (hoje o site mostra os dois telefones como telefone), o Instagram e o CNPJ da matriz (só o da filial EcoIlha aparece, na Transparência).
+- [ ] Confirmar o WhatsApp de pedidos (hoje o site mostra os dois telefones como telefone), o Instagram e o CNPJ da matriz (só o da filial Ecoilha aparece, na Transparência).
 - [ ] Tamanho e preço da cesta da semana.
 
 ## Técnicas
