@@ -37,9 +37,6 @@
 - [ ] Domínio: `site.json → url` já está como www.cooperativaecoserra.com.br; apontar o DNS para a Vercel na entrega.
 
 ## Foto da abertura (hero)
-- [ ] A última foto do hero é provisória: araucária no Parque Nacional de São Joaquim, de Raphael
-      Sombrio (CC BY-SA 4.0, crédito no rodapé). A Tombo vai fotografar a serra na próxima visita;
-      quando chegar, trocar `public/img/home/araucaria-sao-joaquim.webp` (WebP ≤ 500 KB, ~2400 px de
-      largura) e tirar o crédito de `site.json → creditos`.
+- [x] Última foto do hero: foto de grupo dos cooperados enviada pela cooperativa (02/10/2026), no lugar da araucária provisória (Wikimedia, CC BY-SA) — crédito retirado do rodapé.
 - [ ] As outras duas fotos do hero (banca e estufa) têm ~1000 px e ficam suaves em telas grandes:
       pedir à cooperativa os originais em alta resolução.
