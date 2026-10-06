@@ -71,7 +71,6 @@
     "secoes": [
       {
         "tipo": "hero",
-        "expandir": false,
         "tamanho": "discreto",
         "palavra": "Cooperativa Ecoserra",
         "nomeH1": "Cooperativa Ecoserra — orgânicos da Serra Catarinense",
@@ -81,7 +80,8 @@
         },
         "topo": [
           "Desde 1999",
-          "330+ famílias"
+          "330+ famílias",
+          "Role para abrir ↓"
         ],
         "base": "Orgânicos certificados · Rede Ecovida · Serra Catarinense e Florianópolis",
         "imagens": [
