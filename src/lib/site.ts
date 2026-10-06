@@ -28,6 +28,8 @@ export type SecaoHero = {
    * e a legenda final sai menor. Padrão: "gigante".
    */
   tamanho?: 'gigante' | 'discreto';
+  /** botões sobre a foto (só com "expandir": false); o 1º é cheio, os outros em contorno */
+  botoes?: Link[];
   /** false = sem a cena de rolagem (seção presa + círculo que vira tela cheia): a foto final já abre em tela cheia. Padrão: true */
   expandir?: boolean;
 };

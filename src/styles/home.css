@@ -99,10 +99,43 @@ html.reduced .hero__shade { opacity: 1; }
 .hero__caption .serif-i { font-size: 1.12em; }
 html.js:not(.reduced) :is(.hero__word, .hero__q, .hero__caption) { visibility: hidden; }
 html.reduced .hero__caption { display: none; }
-/* "expandir": false — sem a cena de rolagem: foto em tela cheia desde o início */
-html.js .hero--fixo .hero__media { clip-path: none; }
-.hero--fixo .hero__shade { opacity: 1; }
-.hero--fixo .hero__caption { display: none; }
+/* "expandir": false — sem a cena de rolagem: a foto final em tela cheia desde o
+   início, com a frase, um texto curto e os botões no pé, sobre um degradê. */
+html.js .hero--fixo .hero__media,
+.hero--fixo .hero__media { clip-path: none; }
+.hero--fixo .hero__shade {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--escuro) 18%, transparent) 0%,
+    color-mix(in srgb, var(--escuro) 10%, transparent) 35%,
+    color-mix(in srgb, var(--escuro) 55%, transparent) 62%,
+    color-mix(in srgb, var(--escuro) 90%, transparent) 100%
+  );
+}
+.hero--fixo .hero__frame { object-position: 50% 42%; }
+.hero__fixo {
+  /* texto sempre claro sobre a foto, em qualquer aparência */
+  --fg: var(--claro);
+  --bg: var(--escuro);
+  --line: color-mix(in srgb, var(--claro) 55%, transparent);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(36px, 8vh, 88px);
+  z-index: 2;
+  color: var(--claro);
+  display: grid;
+  justify-items: start;
+  gap: clamp(12px, 1.6vw, 20px);
+}
+html.js:not(.reduced) .hero__fixo > * { visibility: hidden; }
+.hero__fixo-nome { margin: 0; opacity: 0.85; }
+.hero__fixo-titulo { margin: 0; font-size: var(--fs-xxl); line-height: 1.02; max-width: 16ch; font-weight: 400; }
+.hero__fixo-titulo .display { line-height: 1.02; }
+.hero__fixo-texto { margin: 0; max-width: 44ch; font-size: var(--fs-m); line-height: 1.4; opacity: 0.92; }
+.hero__fixo-botoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.hero__fixo .btn:hover { color: var(--escuro); }
 
 @media (max-width: 700px) {
   .hero__row-mid, .hero__row--bottom { display: none; }

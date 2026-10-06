@@ -29,6 +29,9 @@
 > - **Ecoilha** (com i minúsculo): texto enviado pela cooperativa (filial da Grande
 >   Florianópolis; PNAE na rede de ensino; PAA para as cozinhas solidárias) + logotipo.
 > - **Transparência** é obrigatória: no menu com ícone e com um atalho na home.
+> - **06/10/2026:** sem o "role para abrir" e sem a cortina de abertura: o site já abre com a
+>   foto dos cooperados em tela cheia, a frase "Da roça para sua família.", um texto curto
+>   (330 famílias, Rede Ecovida) e os botões "Conheça a cooperativa" e "Seja cooperado".
 > - Home: hero → Quem somos → Selos e parceiros → Ecoilha → Seja cooperado (com foto) →
 >   Transparência.
 

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useRef } from 'react';
 import { gsap, SplitText, reducedMotion } from '@/lib/gsap';
 import { useScene } from '@/lib/useScene';
@@ -10,7 +11,7 @@ import type { SecaoHero } from '@/lib/site';
 // se expande até a tela cheia, revelando a legenda. A última foto é a final.
 export default function Hero({ dados }: { dados: SecaoHero }) {
   const ref = useRef<HTMLElement>(null);
-  const { palavra, nomeH1, pergunta, legenda, topo = [], base, imagens, expandir = true, tamanho = 'gigante' } = dados;
+  const { palavra, nomeH1, pergunta, legenda, topo = [], base, imagens, expandir = true, tamanho = 'gigante', botoes = [] } = dados;
   const discreto = tamanho === 'discreto';
 
   useScene(() => {
@@ -19,23 +20,18 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
     const frames = q('.hero__frame');
     const last = frames[frames.length - 1];
 
-    if (reducedMotion() || !expandir) {
+    // sem a cena de rolagem: a foto já está em tela cheia (CSS); o texto só sobe de leve
+    if (!expandir) {
+      if (reducedMotion()) return;
+      gsap.fromTo(q('.hero__fixo > *'), { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.08, ease: 'expo.out', delay: 0.1 });
+      gsap.fromTo(q('.hero__frame'), { scale: 1.05 }, { scale: 1, duration: 2.2, ease: 'expo.out' });
+      return;
+    }
+
+    if (reducedMotion()) {
       gsap.set(q('.hero__media'), { clipPath: 'none' });
       gsap.set(frames, { autoAlpha: 0 });
       gsap.set(last, { autoAlpha: 1 });
-      if (!expandir && !reducedMotion()) {
-        // sem a cena de rolagem: foto final em tela cheia, só a palavra e a pergunta sobem
-        gsap.set(q('.hero__shade'), { opacity: 1 });
-        const w = SplitText.create(q('.hero__word-txt')[0] ?? q('.hero__word')[0], { type: 'chars', mask: 'chars', charsClass: 'sc' });
-        const qEl = q('.hero__q')[0];
-        const qs = qEl ? SplitText.create(qEl, { type: 'words', mask: 'words', wordsClass: 'sw' }) : null;
-        gsap.set(q('.hero__word, .hero__q'), { visibility: 'visible' });
-        const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
-        intro
-          .from(w.chars, { yPercent: 150, duration: 1.6, stagger: 0.07 }, 0)
-          .from(q('.hero__row > *'), { autoAlpha: 0, y: 12, duration: 1, stagger: 0.06 }, 0.8);
-        if (qs) intro.from(qs.words, { yPercent: 135, duration: 1.2, stagger: 0.05 }, 0.6);
-      }
       return;
     }
 
@@ -86,12 +82,45 @@ export default function Hero({ dados }: { dados: SecaoHero }) {
     if (qEl) tl.to(qEl, { yPercent: -120, autoAlpha: 0, duration: 0.4 }, 0);
   }, ref);
 
+  // Abertura fixa: só a foto final, em tela cheia, com a frase e os botões sobre ela.
+  if (!expandir) {
+    const foto = imagens[imagens.length - 1];
+    return (
+      <section className="hero hero--fixo tema-escuro" ref={ref} aria-label="Apresentação">
+        <div className="hero__media">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={foto.src} alt={foto.alt} className="hero__frame" fetchPriority="high" decoding="async" />
+          <div className="hero__shade" />
+        </div>
+        <div className="hero__fixo wrap">
+          <p className="mono hero__fixo-nome" aria-hidden="true">
+            {palavra}
+          </p>
+          <h1 className="hero__fixo-titulo">
+            <span className="sr-only">{nomeH1 ?? palavra} — </span>
+            <span className="display">{legenda.display}</span> {legenda.serif && <span className="serif-i">{legenda.serif}</span>}
+          </h1>
+          {base && <p className="hero__fixo-texto">{base}</p>}
+          {botoes.length > 0 && (
+            <div className="hero__fixo-botoes">
+              {botoes.map((b, i) => (
+                <Link key={b.href} href={b.href} className={`btn${i > 0 ? ' btn--ghost' : ''}`}>
+                  {b.rotulo} {i === 0 && <span aria-hidden="true">→</span>}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  }
+
   // A palavra gigante ocupa ~94% da largura: o tamanho depende do nº de letras.
   const letras = Math.max(3, [...palavra].length);
 
   return (
     <section
-      className={`hero tema-escuro${expandir ? '' : ' hero--fixo'}${discreto ? ' hero--discreto' : ''}`}
+      className={`hero tema-escuro${discreto ? ' hero--discreto' : ''}`}
       ref={ref}
       aria-label="Apresentação"
       style={{ '--letras': letras } as React.CSSProperties}

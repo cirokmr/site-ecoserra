@@ -62,7 +62,7 @@
     "ogAlt": "Família de agricultores cooperados da Ecoserra numa estufa de alface"
   },
   "intro": {
-    "ativa": true,
+    "ativa": false,
     "esquerda": "Cooperativa Ecoserra",
     "direita": "Desde 1999",
     "rotulo": "Abrindo a feira"
@@ -71,31 +71,28 @@
     "secoes": [
       {
         "tipo": "hero",
-        "tamanho": "discreto",
+        "expandir": false,
         "palavra": "Cooperativa Ecoserra",
         "nomeH1": "Cooperativa Ecoserra — orgânicos da Serra Catarinense",
         "legenda": {
           "display": "Da roça",
           "serif": "para sua família."
         },
-        "topo": [
-          "Desde 1999",
-          "330+ famílias",
-          "Role para abrir ↓"
-        ],
-        "base": "Orgânicos certificados · Rede Ecovida · Serra Catarinense e Florianópolis",
         "imagens": [
-          {
-            "src": "/img/home/banca-da-cooperativa.webp",
-            "alt": "Banca da Ecoserra com limões, tomates, maçãs e verduras"
-          },
-          {
-            "src": "/img/home/familia-estufa.webp",
-            "alt": "Família de agricultores cooperados numa estufa de alface"
-          },
           {
             "src": "/img/home/cooperados-reuniao.webp",
             "alt": "Agricultores e agricultoras cooperados da Ecoserra reunidos num auditório, com o banner da cooperativa e os produtos das famílias à frente"
+          }
+        ],
+        "base": "Mais de 330 famílias agricultoras da Serra Catarinense, com orgânicos certificados pela Rede Ecovida.",
+        "botoes": [
+          {
+            "rotulo": "Conheça a cooperativa",
+            "href": "/sobre/"
+          },
+          {
+            "rotulo": "Seja cooperado",
+            "href": "/seja-cooperado/"
           }
         ]
       },

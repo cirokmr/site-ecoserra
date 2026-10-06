@@ -26,7 +26,7 @@ Tipos: `hero`, `manifesto`, `faixa`, `colecao`, `colagem`, `destaques`, `texto`,
 | todas menos `hero` | `"tema": "escuro" \| "claro" \| "destaque"` | fundo da seção. Padrões: manifesto claro, faixa escuro, coleção escuro, colagem destaque, destaques claro, texto escuro, marcos escuro |
 | `hero` | `pergunta` com `« »` | as aspas angulares saem na cor de destaque: `"«O que fica» quando a festa acaba?"` |
 | `hero` | `{de}` e `{ate}` em `topo` e `base` | viram o 1º e o último ano das notícias (`"Notícias de {de} a {ate}"`). Vale também em `intro.esquerda` / `intro.direita` |
-| `hero` | `"expandir": false` | desliga a cena de rolagem (seção presa e círculo que se expande): a foto final já abre em tela cheia e a página rola normal |
+| `hero` | `"expandir": false` | sem a cena de rolagem: abre direto com a foto final em tela cheia e, no pé, `palavra` (pequena), a `legenda` como título, a `base` como texto curto e os `botoes` (`[{ "rotulo", "href" }]`). `topo` e `pergunta` não aparecem |
 | `hero` | `"tamanho": "discreto"` | o nome sai em tamanho de título no pé da tela (não a palavra de ponta a ponta) e a legenda final fica menor; a cena de rolagem continua |
 | `hero` | `nomeH1` | nome completo no `<h1>` só para leitores de tela e buscadores; a palavra gigante continua `palavra` |
 | `manifesto` | `icones: { "src", "alt" }` | faixa de ícones/ilustração da marca abaixo do texto (imagem **clara** sobre transparente; no fundo claro ela é invertida) |
