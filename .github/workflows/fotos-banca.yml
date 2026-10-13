@@ -1,0 +1,58 @@
+# Temporário: baixa fotos candidatas (Unsplash/Pexels) para trocar a foto da banca.
+name: Fotos banca (candidatas)
+on:
+  push:
+    branches: [fotos-banca]
+permissions:
+  contents: write
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: pip install --quiet pillow
+      - name: Baixar e montar folha
+        run: |
+          mkdir -p out && cd out
+          baixar() { curl -sSL --max-time 60 -A "Mozilla/5.0" -o "$1.jpg" "$2" || echo "falhou $1"; }
+          baixar u01-XPltBlxfChk "https://unsplash.com/photos/XPltBlxfChk/download?force=true"
+          baixar u02-m_2FAHuDup4 "https://unsplash.com/photos/m_2FAHuDup4/download?force=true"
+          baixar u03-VnIVONGhie8 "https://unsplash.com/photos/VnIVONGhie8/download?force=true"
+          baixar u04-OqXXSSPs4zw "https://unsplash.com/photos/OqXXSSPs4zw/download?force=true"
+          baixar u05-rS4OSc9yhSo "https://unsplash.com/photos/rS4OSc9yhSo/download?force=true"
+          baixar u06-M1L57tvaoyY "https://unsplash.com/photos/M1L57tvaoyY/download?force=true"
+          baixar u07-8IrVwcDLsgU "https://unsplash.com/photos/8IrVwcDLsgU/download?force=true"
+          baixar u08-spSGX3VtmX0 "https://unsplash.com/photos/spSGX3VtmX0/download?force=true"
+          baixar p09-868110 "https://images.pexels.com/photos/868110/pexels-photo-868110.jpeg"
+          baixar p10-735536 "https://images.pexels.com/photos/735536/pexels-photo-735536.jpeg"
+          python3 - <<'PY'
+          import glob, json
+          from PIL import Image, ImageDraw, ImageFont, ImageOps
+          fs = sorted(glob.glob('*.jpg')); info=[]; thumbs=[]
+          for f in fs:
+              try:
+                  im = ImageOps.exif_transpose(Image.open(f)).convert('RGB')
+              except Exception as e:
+                  print('erro', f, e); continue
+              info.append({'arquivo': f, 'largura': im.width, 'altura': im.height})
+              big = im.copy(); big.thumbnail((2400, 2400)); big.save(f, quality=88)
+              t = im.copy(); t.thumbnail((600, 400)); thumbs.append((f, t, im.size))
+          W, H = 620, 470; cols = 2; rows = (len(thumbs)+1)//2
+          sheet = Image.new('RGB', (W*cols, H*rows), 'white'); d = ImageDraw.Draw(sheet)
+          try: font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 22)
+          except: font = ImageFont.load_default()
+          for i, (f, t, sz) in enumerate(thumbs):
+              x, y = (i % cols)*W + 10, (i // cols)*H + 10
+              sheet.paste(t, (x, y)); d.text((x, y+405), f"{f}  {sz[0]}x{sz[1]}", fill='black', font=font)
+          sheet.save('folha.jpg', quality=85)
+          json.dump(info, open('info.json','w'), indent=1); print(json.dumps(info, indent=1))
+          PY
+      - name: Salvar no branch prints
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          git init -q tmp && cd tmp
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q --depth 1 origin prints && git checkout -q prints
+          rm -rf fotos/fotos-banca && mkdir -p fotos/fotos-banca && cp ../out/* fotos/fotos-banca/
+          git add fotos/fotos-banca && git commit -qm "Fotos candidatas da banca" && git push -q origin prints
