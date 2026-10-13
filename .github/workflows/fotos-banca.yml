@@ -15,16 +15,19 @@ jobs:
         run: |
           mkdir -p out && cd out
           baixar() { curl -sSL --max-time 60 -A "Mozilla/5.0" -o "$1.jpg" "$2" || echo "falhou $1"; }
-          baixar u01-XPltBlxfChk "https://unsplash.com/photos/XPltBlxfChk/download?force=true"
-          baixar u02-m_2FAHuDup4 "https://unsplash.com/photos/m_2FAHuDup4/download?force=true"
-          baixar u03-VnIVONGhie8 "https://unsplash.com/photos/VnIVONGhie8/download?force=true"
-          baixar u04-OqXXSSPs4zw "https://unsplash.com/photos/OqXXSSPs4zw/download?force=true"
-          baixar u05-rS4OSc9yhSo "https://unsplash.com/photos/rS4OSc9yhSo/download?force=true"
-          baixar u06-M1L57tvaoyY "https://unsplash.com/photos/M1L57tvaoyY/download?force=true"
-          baixar u07-8IrVwcDLsgU "https://unsplash.com/photos/8IrVwcDLsgU/download?force=true"
-          baixar u08-spSGX3VtmX0 "https://unsplash.com/photos/spSGX3VtmX0/download?force=true"
+          baixar u01-XPltBlxfChk "https://images.unsplash.com/photo-1757627550652-30788bfce978?fm=jpg&q=85&w=3000"
+          baixar u02-m_2FAHuDup4 "https://images.unsplash.com/photo-1661713093950-89ff279c6610?fm=jpg&q=85&w=3000"
+          baixar u03-VnIVONGhie8 "https://images.unsplash.com/photo-1598962099619-528a224cb625?fm=jpg&q=85&w=3000"
+          baixar u04-OqXXSSPs4zw "https://images.unsplash.com/photo-1635341083777-5f93a755e916?fm=jpg&q=85&w=3000"
+          baixar u05-rS4OSc9yhSo "https://images.unsplash.com/photo-1535202610320-919f9b13de77?fm=jpg&q=85&w=3000"
+          baixar u06-M1L57tvaoyY "https://images.unsplash.com/photo-1669154777196-aca4d45b581a?fm=jpg&q=85&w=3000"
+          baixar u07-8IrVwcDLsgU "https://images.unsplash.com/photo-1785076315182-98f6751997ed?fm=jpg&q=85&w=3000"
           baixar p09-868110 "https://images.pexels.com/photos/868110/pexels-photo-868110.jpeg"
           baixar p10-735536 "https://images.pexels.com/photos/735536/pexels-photo-735536.jpeg"
+          baixar p11-31930012 "https://images.pexels.com/photos/31930012/pexels-photo-31930012.jpeg"
+          baixar p12-319798 "https://images.pexels.com/photos/319798/pexels-photo-319798.jpeg"
+          baixar p13-2255935 "https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg"
+          baixar p14-32189195 "https://images.pexels.com/photos/32189195/pexels-photo-32189195.jpeg"
           python3 - <<'PY'
           import glob, json
           from PIL import Image, ImageDraw, ImageFont, ImageOps
