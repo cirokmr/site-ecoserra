@@ -36,6 +36,9 @@
 - [ ] Pagamento (Pix pelo Mercado Pago): o botão "Finalizar pedido" está desligado até o checkout existir.
 - [ ] Domínio: `site.json → url` já está como www.cooperativaecoserra.com.br; apontar o DNS para a Vercel na entrega.
 
+## Foto da seção "Quem somos" (home)
+- [ ] A foto da banca (1040 px) fica borrada. **13/10/2026: o Ciro vai pedir fotos reais novas** (banca e produtos). Mínimo 2000 px, luz natural, sem pessoas de costas cortadas; uma na vertical/quadrada para esta seção. Alternativa de banco de imagem testada e não usada: branch `foto-banca-a` (Unsplash M1L57tvaoyY). O branch `fotos-banca` foi só para baixar candidatas e pode ser apagado.
+
 ## Foto da abertura (hero)
 - [x] Última foto do hero: foto de grupo dos cooperados enviada pela cooperativa (02/10/2026), no lugar da araucária provisória (Wikimedia, CC BY-SA) — crédito retirado do rodapé.
 - [ ] As outras duas fotos do hero (banca e estufa) têm ~1000 px e ficam suaves em telas grandes:
