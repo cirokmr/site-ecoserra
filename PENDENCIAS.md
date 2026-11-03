@@ -37,9 +37,8 @@
 - [ ] Domínio: `site.json → url` já está como www.cooperativaecoserra.com.br; apontar o DNS para a Vercel na entrega.
 
 ## Foto da seção "Quem somos" (home)
-- [ ] A foto da banca (1040 px) fica borrada. **13/10/2026: o Ciro vai pedir fotos reais novas** (banca e produtos). Mínimo 2000 px, luz natural, sem pessoas de costas cortadas; uma na vertical/quadrada para esta seção. Alternativa de banco de imagem testada e não usada: branch `foto-banca-a` (Unsplash M1L57tvaoyY). O branch `fotos-banca` foi só para baixar candidatas e pode ser apagado.
+- [x] 03/11/2026: a foto da banca foi ampliada 2x com IA (Real-ESRGAN realesr-general-x4v3, rodado em numpy na sessão) e ficou nítida; mesmo enquadramento. **Não pedir fotos novas à cooperativa**: o dono prefere o mínimo de contato, então o que der para resolver por conta própria (como esta ampliação) é o caminho. Branches `foto-banca-a` e `fotos-banca` (testes antigos) podem ser apagados.
 
 ## Foto da abertura (hero)
 - [x] Última foto do hero: foto de grupo dos cooperados enviada pela cooperativa (02/10/2026), no lugar da araucária provisória (Wikimedia, CC BY-SA) — crédito retirado do rodapé.
-- [ ] As outras duas fotos do hero (banca e estufa) têm ~1000 px e ficam suaves em telas grandes:
-      pedir à cooperativa os originais em alta resolução.
+- [x] 03/11/2026: família na estufa (1400 px), caixas no galpão (2080 px, capa de /sobre/) e sede em Lages (2080 px) também ampliadas com IA. Rostos conferidos (naturais).
